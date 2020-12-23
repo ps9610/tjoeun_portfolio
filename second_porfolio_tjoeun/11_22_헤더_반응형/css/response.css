@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+/* 👇 화면 너비가 990px 이하면 사이드메뉴 첫번째 안 보이게 설정 */
+/* 모바일->pc = min-width / pc->모바일 = max-width = 내림차순 */
+@media all and (min-width:1200px) and (max-width:1600px) {
+    #main #section01 .hungry > img {width:75%;}
+}
+
+@media all and (max-width:1170px){
+    /* #main .section234 .wrap .gap {margin:0;} */
+}
+
+@media all and (max-width:1200px)/*990px이하 해상도 모두 가능*/ {
+    #header .wrap .gap .right #aside > div > span:nth-child(1) {display:none;}
+    #main #section01 .hungry > img {width:65%;}/* 양쪽에 여백생기게하려고 */
+}
+
+@media all and (max-width:1200px) and (orientation:landscape) {
+    #header .wrap .gap .right #aside > div > span:nth-child(1) {display:none;}
+    #main #section01 .hungry > img {width:50%;}
+}
+
+@media all and (max-width:1200px) and (orientation:portrait) {
+    #header .wrap .gap .right #aside > div > span:nth-child(1) {display:none;}
+    #main #section01 .hungry > img {width:70%;}
+}
+
+
+@media all and (max-width:991px){
+    #header .wrap .gap .left  #nav,
+    #header .wrap .gap .left .logo > i,
+    #header .wrap .gap .right #aside {display:none;}
+    #header .wrap .gap .right .mobile {display:block;}  
+
+    #main #section01,
+    #main #section02,
+    #main #section03,
+    #main #section04 {background-attachment:scroll}
+
+    #main #section01 .hungry > img {width:60%;}/* 1200px일 때보다 더 적게 */
+}
+
+@media all and (max-width:991px) and (orientation:landscape){
+/* ㄴ>해상도가 991px이하이고 핸드폰 가로로 돌렸을 때 해당 */
+#main #section01 .hungry > img {width:40%;}
+}
+@media all and (max-width:991px) and (orientation:portrait){
+/* ㄴ>해상도가 991px이하이고 핸드폰 세로로 돌렸을 때 해당 */
+#main #section01 .hungry > img {width:70%;}
+}
+@media all and (max-width:760px){
+    #main #section09 {padding-top:70px}
+    #main #section09 .wrap .gap .container .content {padding-top:50px;}
+    #main #section09 .wrap .gap .container .content .gallery-nav {padding-bottom:30px;}
+    #main #section09 .wrap .gap .container .content .gallery-nav > ul > li {display:block;margin:0;padding-bottom:20px;}/* 좌우여백 필요없고 아래 여백만 필요함 */
+    #main #section09 .wrap .gap .container .content .gallery-nav > ul > li > a {display:inline-block;}
+}

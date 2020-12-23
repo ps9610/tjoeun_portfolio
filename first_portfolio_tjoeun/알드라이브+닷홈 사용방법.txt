@@ -1,0 +1,14 @@
+사이트맵 - 폴더 추가
+
+호스트(닷홈주소) / 닷홈아이디 / 닷홈비밀번호 / 
+http://sohye.dothome.co.kr/ / sohye / qkthgp6438!
+
+html 파일 안에 내가 올릴거 저장 - 이름 바꾸기
+
+http://sohye.dothome.co.kr/저장한파일명
+
+1. 스타벅스 프로젝트
+http://sohye.dothome.co.kr/starbuks
+2. 브란도 프로젝트
+3. 제네시스 프로젝트
+4. 제이슨여행사 프로젝트

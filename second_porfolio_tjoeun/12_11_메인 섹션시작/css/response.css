@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+/* 990px 이하 해상도 모두 가능 */
+@media all and (max-width:1199px) {
+    #main #section01 #header .gap {padding:0;transition:padding .3s;}
+}
+
+@media all and (max-width:767px){
+    #main #section01 #header .gap .content .logo {width:33.3333333%;}
+    #main #section01 #header .gap .content .logo .logo-gap {padding:0;padding-left:15px;}
+    #main #section01 #header .gap .content .menu {width:33.3333333%;}
+    #main #section01 #header .gap .content .simple-menu {width:33.3333333%;}
+    #main #section01 #header .gap .content .simple-menu .simple-gap {padding:0;padding-right:15px;}
+    
+    .modal .container .gap .text-wrap {padding:20px 0 5px 0;}
+    .modal .container .gap .text-wrap .content-wrap {float:none;margin:0;width:100%;text-align:center;}
+    .modal .container .gap .text-wrap .input-wrap {float:none;margin:0;width:100%;text-align:center;}
+    .modal .container .gap .text-wrap .input-wrap .email-wrap > input {display:block;}
+    .modal .container .gap .text-wrap .input-wrap .check-wrap > div > label {font-size:12px;letter-spacing:1px;font-weight:400;}
+}
+
+@media all and (max-width:680px){
+    .modal .container {width:95%;margin:0 auto;}
+}
+
+@media all and (max-width:500px){
+    .modal .container {width:90%;margin:0 auto;}
+}
+
+@media all and (max-width:1200px) and (orientation:landscape) {
+}
+
+@media all and (max-width:1200px) and (orientation:portrait) {
+}

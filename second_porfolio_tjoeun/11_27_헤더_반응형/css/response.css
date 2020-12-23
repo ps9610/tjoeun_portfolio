@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/* 990px 이하 해상도 모두 가능 */
+@media all and (max-width:1199px) {
+    #header .gap {padding:0;transition:padding .3s;}
+}
+
+@media all and (max-width:991px){]
+
+}
+
+@media all and (max-width:1200px) and (orientation:landscape) {
+}
+
+@media all and (max-width:1200px) and (orientation:portrait) {
+}

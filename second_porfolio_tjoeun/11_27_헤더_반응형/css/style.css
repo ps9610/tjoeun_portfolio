@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+#header {z-index:3;position:relative;width:100%;background:#29221f;}
+#header .gap {padding:0 35px;transition:padding .3s;} /* padding 0 1.839201% */
+/* .logo .center .icons */
+#header .gap .content {width:100%;border-bottom:1px solid rgba(204,204,204,.08);}
+#header .gap .content .logo {float:left;width:16.666121%;}
+#header .gap .content .logo .logo-gap {padding:0 15px;}/* 0 4.9180328% */
+#header .gap .content .logo .logo-gap .logo-wrap {width:100%;}/* padding:23.06px 0; */
+#header .gap .content .logo .logo-gap .logo-wrap > h2 {width:100%;}
+#header .gap .content .logo .logo-gap .logo-wrap > h2 > a {display:inline-block;width:106px;margin:23.055px 0;line-height:100%;}
+#header .gap .content .logo .logo-gap .logo-wrap > h2 > a > img {width:100%;}
+
+#header .gap .content .menu {float:left;width:66.667758%}
+#header .gap .content .menu .menu-wrap {width:100%;}
+#header .gap .content .menu .menu-wrap .nav {width:100%;height:100%;text-align:center;}
+#header .gap .content .menu .menu-wrap .nav > ul {display:inline-block;}
+#header .gap .content .menu .menu-wrap .nav > ul > li {float:left;}
+#header .gap .content .menu .menu-wrap .nav > ul > li.addHamburger {}
+#header .gap .content .menu .menu-wrap .nav > ul > li > a {display:inline-block;padding:27px 18px;}
+#header .gap .content .menu .menu-wrap .nav > ul > li > a > span {display:inline-block;font-size:13px;font-weight:600;padding-bottom:2px;color:#fff;transition:all .6s;}
+#header .gap .content .menu .menu-wrap .nav > ul > li > a > span:hover {color:rgba(255, 255, 255, .6);border-bottom:1px solid rgba(255, 255, 255, .6);}
+#header .gap .content .menu .menu-wrap .nav > ul > li:nth-child(1) > a {padding:27px 18px 27px 0;}
+#header .gap .content .menu .menu-wrap .nav > ul > li:nth-child(7) > a {padding:27px 0 27px 18px;}
+#header .gap .content .menu .menu-wrap .nav > ul > li > a .aside > ul {}
+#header .gap .content .menu .menu-wrap .nav > ul > li > a .aside > ul > li {}
+#header .gap .content .menu .menu-wrap .nav > ul > li > a .aside > ul > li > div {} /* 여백 */
+#header .gap .content .menu .menu-wrap .nav > ul > li > a .aside > ul > li > div > a {}
+#header .gap .content .menu .menu-wrap .nav > ul > li > a .aside > ul > li > div > a > i {}
+
+#header .gap .content .simple-menu {float:left;width:16.666121%;}
+#header .gap .content .simple-menu .simple-gap {padding:0 15px;}/* 0 4.9180328% */
+#header .gap .content .simple-menu .simple-gap .container {width:100%;text-align:right;}
+#header .gap .content .simple-menu .simple-gap .container > ul {display:inline-block;}
+#header .gap .content .simple-menu .simple-gap .container > ul > li {float:left;margin:26.93px 0;}
+#header .gap .content .simple-menu .simple-gap .container > ul > li:nth-child(1) > div {margin-left:14px;}
+#header .gap .content .simple-menu .simple-gap .container > ul > li:nth-child(2) > div {margin-left:14px;}
+#header .gap .content .simple-menu .simple-gap .container > ul > li:nth-child(3) > div {margin-left:12px;}
+#header .gap .content .simple-menu .simple-gap .container > ul > li:nth-child(4) > div {margin:0 12px 0 10px;}
+#header .gap .content .simple-menu .simple-gap .container > ul > li > div > a {display:inline-block;position:relative;}
+#header .gap .content .simple-menu .simple-gap .container > ul > li > div > a > i {font-size:13px;color:#fff;transition:all .3s;}
+#header .gap .content .simple-menu .simple-gap .container > ul > li > div > a:hover > i {color:rgba(255, 255, 255, .6);}
+#header .gap .content .simple-menu .simple-gap .container > ul > li > div > a > div {padding-right:12px;}
+#header .gap .content .simple-menu .simple-gap .container > ul > li > div > a > div > span {display:inline-block;width:16px;padding:3px 0;font-size:10px;text-align:center;color:#fff;font-weight:600;position:absolute;top:-8px;right:-10px;background:#232323;border-radius:50%;}
+
+#main {z-index:2;position:relative;}
+#main #section1 {width:100%;height:880px;}
+#main #section1 .wrap {width:auto;}
+#main #section1 .wrap {width:100%;height:880px;background:#29221f url(../img/01.png) no-repeat 50% 0;background-size:cover;}
+#main #section2 {}
+#main #section3 {}
+#main #section4 {}
+#main #section5 {}
+#main #section6 {}
+#main #section7 {}
+#main #section8 {}
+#main #section9 {}
+
+#footer {z-index:1;position:relative;}  
+
+.modal {z-index:4;position:absolute;top:0;left:0;width:100%;display:none;}
+.modal:after {z-index:3;content:"";display:block;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0, 0, 0, 0.5);}
+.modal .container {z-index:4;position:relative;padding:13% 0;width:663px;margin:0 auto;}
+.modal .container .gap {z-index:1;position:relative;padding:15px;}
+.modal .container .gap .img-wrap {width:100%;height:100%;}
+.modal .container .gap .img-wrap > h2 {width:100%;}
+.modal .container .gap .img-wrap > h2 > img {width:100%;height:100%;}
+.modal .container .gap .text-wrap {padding:30px 0 15px 0;background:#fff;}
+.modal .container .gap .text-wrap .content-wrap {float:left;height:100%;margin:0 15px 0 40px;}
+.modal .container .gap .text-wrap .content-wrap > h2 {margin-bottom:5px;font-size:22px;letter-spacing:.3px;line-height:24px;color:#232323;font-weight:500;}
+.modal .container .gap .text-wrap .input-wrap  {float:right;margin:0 45px 0 15px;position:relative;}
+.modal .container .gap .text-wrap .input-wrap .email-wrap {display:block;border:1px solid #d7d7d7;padding:0 50px 0 15px;overflow:hidden;}
+.modal .container .gap .text-wrap .input-wrap .email-wrap > input {display:inline-block;padding:7.5px 0;}
+.modal .container .gap .text-wrap .input-wrap .email-wrap > input::placeholder {color:#aaa;font-size:8px;font-weight:500;}
+.modal .container .gap .text-wrap .input-wrap > span {display:inline-block;position:absolute;top:0;right:0;padding:9px 12px;border-left:1px solid #d7d7d7;text-align:center;}
+.modal .container .gap .text-wrap .input-wrap > span > i {width:100%;}
+.modal .container .gap .text-wrap .input-wrap .check-wrap {padding:10px 0 12px 0;}
+.modal .container .gap .text-wrap .input-wrap .check-wrap > div {width:100%;}  
+.modal .container .gap .text-wrap .input-wrap .check-wrap > div > input {margin-right:10px;}
+.modal .container .gap .text-wrap .input-wrap .check-wrap > div > label {font-size:12px;letter-spacing:.3px;font-weight:600;}
+.modal .container .close {z-index:2;position:absolute;top:28%;right:20px;}
+.modal .container .close .close-wrap {width:100%;}
+.modal .container .close .close-wrap > span {display:block;}
+.modal .container .close .close-wrap > span > a {display:block;font-size:23px;color:#000;}
+.modal .container .close .close-wrap > span > a > i {display:block;}

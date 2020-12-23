@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+<<<<<<< HEAD
+#header {z-index:3;position:relative;width:100%;height:90px;background:url(../img/hdBga.gif) repeat 50% 50%;background-size:cover;}
+#header .wrap {width:1200px;height:100%;margin:0 auto;}
+#header .wrap .h-left {float:left;width:33.3%;height:100%;}
+#header .wrap .h-left .h-left-wrap {width:100%;margin:39px 0 0 0;}
+#header .wrap .h-left .h-left-wrap .find {display:inline-block;width:122px;height:51px;background:url(../img/main_hotelsch.png) no-repeat 50% 50%;}
+#header .wrap .h-left .h-left-wrap .find > a {display:inline-block;width:100%;height:100%;}
+#header .wrap .h-left .h-left-wrap .resevation {display:inline-block;width:83px;height:50px;background:url(../img/hubMnuResevation.gif) no-repeat 50% 50%;margin-left:23px;}
+#header .wrap .h-left .h-left-wrap .resevation > a {display:inline-block;width:100%;height:100%;}
+#header .wrap .h-left .h-left-wrap .underline > i {display:block;width:100%;height:1px;background:#101010;}
+#header .wrap .h-center {float:left;width:33.3%;}
+#header .wrap .h-center > h2 {width:202px;height:50px;margin:20px auto 0;padding-right:55px;}
+#header .wrap .h-center > h2 > img {width:100%;height:100%;}
+#header .wrap .h-right {float:left;width:33.3%;height:100%;background:#c99;}
+#main {z-index:2;position:relative;width:100%;height:3283px;}
+#footer {z-index:1;position:relative;width:100%;height:353px;}
+=======
+#wrap {position:relative;z-index:1;width:100%;}
+
+#wrap #header {position:relative;z-index:3;width:100%;background:#F1E3C4;}
+#wrap #header #header-wrap {width:1200px;margin:0 auto;}
+#wrap #header #header-wrap > ul {width:100%;}
+#wrap #header #header-wrap > ul > li {float:left;width:1200px;height:90px;}
+#wrap #header #header-wrap > ul .header-wrap-left {width:400px;margin:0 auto;}
+#wrap #header #header-wrap > ul .header-wrap-left > span {float:left;width:100%;padding-top:39px;}
+
+#wrap #header #header-wrap > ul .header-wrap-left .hotel-find {width:50%;background:#F1E3C4;}
+#wrap #header #header-wrap > ul .header-wrap-left .hotel-find > a {display:block;width:122px;height:51px;}
+#wrap #header #header-wrap > ul .header-wrap-left .hotel-find > a > div {display:block;}
+#wrap #header #header-wrap > ul .header-wrap-left .hotel-find > a > div > img {width:100%;height:100%;}
+
+#wrap #header #header-wrap > ul .header-wrap-left .hotel-reserve {position:relative;width:50%;}
+#wrap #header #header-wrap > ul .header-wrap-left .hotel-reserve > a {position:relative;z-index:1;display:block;width:83px;height:51px;margin-left:-50px;}
+#wrap #header #header-wrap > ul .header-wrap-left .hotel-reserve > a > div {display:block;}
+#wrap #header #header-wrap > ul .header-wrap-left .hotel-reserve > a > div > img {width:100%;height:100%;}
+
+#wrap #header #header-wrap > ul .header-wrap-left .hotel-reserve > div {position:absolute;z-index:2;bottom:0;left:0;width:83px;margin-left:-50px;}
+#wrap #header #header-wrap > ul .header-wrap-left .hotel-reserve > div .hotel-under {display:block;width:100%;height:4px;background:#101010;}
+
+#wrap #header #header-wrap > ul .header-wrap-center {width:400px;}
+#wrap #header #header-wrap > ul .header-wrap-center > h1 {width:260px;height:73px;line-height:73px;text-align:center;margin:3px 0 0 41px;}
+#wrap #header #header-wrap > ul .header-wrap-center > h1 > a {display:inline-block;width:202px;height:50px;}
+#wrap #header #header-wrap > ul .header-wrap-center > h1 > a > div {display:inline-block;}
+#wrap #header #header-wrap > ul .header-wrap-center > h1 > a > div > img {width:100%;height:100%;}
+
+#wrap #header #header-wrap > ul .header-wrap-right {width:400px;font-size:12px;}
+#wrap #header #header-wrap > ul .header-wrap-right #aside {width:100%;margin:11px 51px;}
+#wrap #header #header-wrap > ul .header-wrap-right #aside > ul {position:relative;width:100%;}
+#wrap #header #header-wrap > ul .header-wrap-right #aside > ul > li {position:relative;float:left;padding-right:35px;}
+#wrap #header #header-wrap > ul .header-wrap-right #aside > ul > li > a {display:block;}
+
+#wrap #header #header-wrap > ul .header-wrap-right #aside .sub-language-box {position:absolute;left:75%;top:4px;margin-left:24px;width:102px}
+#wrap #header #header-wrap > ul .header-wrap-right #aside .sub-language-box > ul {width:100%;}
+#wrap #header #header-wrap > ul .header-wrap-right #aside .sub-language-box > ul > li {color:#fff;}
+#wrap #header #header-wrap > ul .header-wrap-right #aside .sub-language-box > ul > li:nth-child(1) {color:#555;}
+#wrap #header #header-wrap > ul .header-wrap-right #aside .sub-language-box > ul > li > div {float:left;position:relative;top:-1px;z-index:1;width:100%;background:#BFAF9D;}
+#wrap #header #header-wrap > ul .header-wrap-right #aside .sub-language-box > ul > li > div.lang-ko {top:0;background:inherit;}
+#wrap #header #header-wrap > ul .header-wrap-right #aside .sub-language-box > ul > li > div > strong {position:relative;width:100%;top:30px;left:20px;padding:15px;}
+#wrap #header #header-wrap > ul .header-wrap-right #aside .sub-language-box > ul > li > div > strong > img {width:2px;height:2px;display:inline-block;}
+#wrap #header #header-wrap > ul .header-wrap-right #aside .sub-language-box > ul > li > span {float:left;position:absolute;z-index:2;top:5px;left:28px;display:block;}
+#wrap #header #header-wrap > ul .header-wrap-right #aside .sub-language-box > ul > li > span > hr {width:100;height:1;border:0;outline-style:none;border:1px soild #000;}
+
+
+#wrap #header #header-wrap > ul .header-wrap-right #nav {width:100%;height:50%;margin:0px 50px;background:#e99;}
+#wrap #header #header-wrap > ul .header-wrap-right #nav > ul {}
+#wrap #header #header-wrap > ul .header-wrap-right #nav > ul > li {}
+#wrap #header #header-wrap > ul .header-wrap-right #nav > ul > li > a {} 
+
+
+
+#wrap #main {position:relative;z-index:2;width:100%;}
+
+#wrap #main #section1 {width:100%;height:650px;}
+#wrap #main #section2 {width:100%;height:770px;}
+#wrap #main #section3 {width:100%;height:367px;}
+#wrap #main #section4 {width:100%;height:811px;}
+
+#wrap #footer {position:relative;z-index:1;width:100%;height:170px;background:#F1E3C4;}
+>>>>>>> efb5f426ff58a545dd8ed64855339fae272bfd68
