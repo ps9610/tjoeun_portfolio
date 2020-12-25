@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+#wrap {width:100%;}
+/*(컨테이너)부모영역에서 모든 작업이 끝난다고 생각하면 됨*/
+#wrap .flex-container {width:100%;display:flex;flex-wrap:wrap;/* flex-direction:row; */} 
+/* display:flex;디스플레이속성을플렉스로하겠다. | flex-wrap:wrap;줄을바꾸겠다.  */
+#wrap .flex-container .flex-item {width:25%;}
+#wrap .flex-container .flex-item img {width:100%;}
+
+/* 
+//////flex//////
+
+- 정렬방향 : 가로(기본값) | flex-direction:row;(줄바뀜X)
+- 정렬방향 : 가로역순     | flex-direction:row-reverse;(줄바뀜X)
+- 정렬방향 : 세로        | flex-direction:column;
+- 정렬방향 : 세로역순    | flex-direction:column-reverse;(줄바뀜X)
+
+- 줄바뀜 속성은 flex-wrap :     wrap     |       no-wrap(기본형)     |        wrap-reverse
+- 줄바뀜 속성은 flex-wrap : 줄을 바꾸겠다 | 줄을 바꾸지 않겠다(기본형) | 역순으로 배열하고 줄을 바꾸겠다.
+
+*/
