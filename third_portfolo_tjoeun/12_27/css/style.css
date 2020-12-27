@@ -1,18 +1,36 @@
 @charset "UTF-8";
 
-#header {z-index:3;position:fixed;}
-#main {z-index:2;}
-#footer {z-index:1;}
+/* pop-up */
+#wrap .pop-up {z-index:4;position:relative;width:100%;background:#272936;margin-top:0;transition:all .5s;}
+#wrap .pop-up.addClose {margin-top:-202.5px;}
+#wrap .pop-up .slide-container {z-index:1;position:relative;width:100%;max-width:1004px;margin:0 auto;}
+#wrap .pop-up .slide-container .slide-view {z-index:1;position:relative;width:100%;overflow:hidden;}
+#wrap .pop-up .slide-container .slide-view .slide-wrap {position:relative;width:calc(1004px*4)/* (1004px*4) */;margin-left:-1004px;}
+#wrap .pop-up .slide-container .slide-view .slide-wrap .slide {float:left;width:100%;max-width:1004px;}
+#wrap .pop-up .slide-container .slide-view .slide-wrap .slide .slide-gap {width:auto;padding:3.18725099601594% 0 1.99684708355229%;/* 32px 0 38px */box-sizing:border-box;display:flex;justify-content:center;}
+#wrap .pop-up .slide-container .slide-view .slide-wrap .slide .slide-gap span {display:block;width:auto;text-align:center;}
+#wrap .pop-up .slide-container .slide-view .slide-wrap .slide .slide-gap span:first-child {margin-right:24px;}
+#wrap .pop-up .slide-container .slide-view .slide-wrap .slide .slide-gap span a {display:block;width:auto;}
+#wrap .pop-up .slide-container .slide-view .slide-wrap .slide .slide-gap span a img {display:block;width:auto;}
 
-.pop-up {z-index:3;position:absolute;top:0;left:0;width:100%;height:200px;}
-.pop-up .wrap {width:100%;height:200px;}
-.pop-up .wrap .gap {width:1050px;height:200px;margin:32px auto 0;}
-.pop-up .wrap .gap .slide-container {width:100%;height:200px;}
-.pop-up .wrap .gap .slide-container .slide-view {width:100%;height:200px;}
-.pop-up .wrap .gap .slide-container .slide-view .slide-wrap {width:auto;height:200px;}
-.pop-up .wrap .gap .slide-container .slide-view .slide-wrap .slide {float:left;left:0;width:1004px;height:200px;}
-.pop-up .wrap .gap .slide-container .slide-view .slide-wrap .slide0 {}
-.pop-up .wrap .gap .slide-container .slide-view .slide-wrap .slide1 {}
-.pop-up .wrap .gap .slide-container .slide-view .slide-wrap .slide > span {display:block;}
-.pop-up .wrap .gap .slide-container .slide-view .slide-wrap .slide > span > a {display:block;}
-.pop-up .wrap .gap .slide-container .slide-view .slide-wrap .slide > span > a > img {display:block;width:100%;height:100%;}
+#wrap .pop-up .slide-container .btn-wrap {z-index:2;position:absolute;top:37%;left:0;width:100%;}
+#wrap .pop-up .slide-container .btn-wrap .left-btn {display:inline-block;position:absolute;left:-3.8%;width:16px;height:30px;background:url(../img/spr_ico_top_popup.png) no-repeat 0 0;background-size:44px 107px;}
+#wrap .pop-up .slide-container .btn-wrap .left-btn > a {display:block;width:100%;height:100%;}
+
+#wrap .pop-up .slide-container .btn-wrap .right-btn {display:inline-block;position:absolute;right:-3.8%;width:16px;height:30px;background:url(../img/spr_ico_top_popup.png) no-repeat 90% 0;background-size:44px 107px;}
+#wrap .pop-up .slide-container .btn-wrap .right-btn > a {display:block;width:100%;height:100%;}
+
+#wrap .pop-up .slide-container .page-wrap {z-index:2;position:relative;padding-bottom:20px;display:flex;justify-content:center;width:100%;height:20px;}
+#wrap .pop-up .slide-container .page-wrap .page-show {display:inline-flex;margin:0 3px;color:#fff;font-size:15px;line-height:20px;}
+#wrap .pop-up .slide-container .page-wrap .playBtn {display:block;margin:0 8px 0 10px;width:19px;height:20px;background:url(../img/spr_ico_top_popup.png) no-repeat 2% 100%;background-size:44px 107px;}
+#wrap .pop-up .slide-container .page-wrap .stopBtn {display:block;width:19px;height:20px;background:url(../img/spr_ico_top_popup.png) no-repeat 98% 100%;background-size:44px 107px;}
+#wrap .pop-up .slide-container .page-wrap .page-show.addPage {font-weight:700;}
+
+#wrap .pop-close-btn {z-index:4;position:relative;display:block;margin:0 auto;margin-right:19%;width:73px;height:20px;background:#272936;}
+#wrap .pop-close-btn > a {display:inline-block;color:#fff;font-size:13.3333px;line-height:20px;padding:0 8px;}
+#wrap .pop-close-btn > a > span {display:inline-block;line-height:20px;width:10px;height:20px;background:url(../img/spr_ico_popupzone_.png) no-repeat 100% 30%;background-size:30px 6px;}
+#wrap .pop-close-btn > a.addClose > span {background:url(../img/spr_ico_popupzone_.png) no-repeat 0% 30%;background-size:30px 6px;}
+
+
+#wrap #header {z-index:3;position:fixed;width:100%;padding-top:20px;height:101px;}
+#wrap #footer {z-index:1;position:relative;}

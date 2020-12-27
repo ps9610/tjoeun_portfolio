@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-* {margin:0;padding:0;vertical-align:middle;border:0;position:relative;}
+* {margin:0;padding:0;vertical-align:middle;border:0;}
 html, body {width:100%;height:100%;}
 html {overflow-y:scroll;} /* 스크롤바 너비 17px/전체1920px-17px = 1903px=기본적인스크롤바제외전체화면너비 / root에만 만듦 */
 html.addScroll {overflow:hidden;} /* 모달창에서는 스크롤 없이 설정하려고 */
@@ -30,8 +30,8 @@ img {vertical-align:middle;}
 /* skip */
 #skip {z-index:2;position:absolute;top:0;left:0;width:100%;}
 #skip > li {width:100%;}
-#skip > li > a {display:block;line-height:0;font-size:0;text-align:center;color:#fff;background:#000;border-bottom:2px solid #fff;}
-#skip > li > a:focus {line-height:170%;font-size:15px;font-weight:600;}
+#skip > li > a {display:block;line-height:0;font-size:0;text-align:center;color:#fff;background:#000;}
+#skip > li > a:focus {line-height:170%;font-size:15px;font-weight:600;border-bottom:2px solid #fff;}
 
 /* wrap */
 #wrap {z-index:1;position:relative;width:100%;overflow:hidden;}

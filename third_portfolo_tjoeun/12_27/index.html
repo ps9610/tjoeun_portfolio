@@ -8,7 +8,7 @@
     <meta name="Viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0. maximum-scale=1.6, user-scalable=no">
     <meta name="Title" content="인천국제공항">
     <meta name="Publisher" content="프론트엔드 박소혜">
-    <meta name="Author-date" content="2020-12-25"> 
+    <meta name="Author-date" content="2020-12-27"> 
     <meta name="Author" content="프론트엔드 박소혜">
     <meta name="Copyright" content="인천국제공항">
     <meta name="Keywords" content="인천국제공항, 인천국제공항공사, 출발, 도착, 환승, 교통, 주차, 쇼핑, 공항지도, 항공편, 수속, 제1 여객터미널, 제2 여객터미널, 면세점">
@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/response.css">
 
     <!-- 오픈 아이콘 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- font-awesome 4.0 -->
@@ -63,53 +64,70 @@
 
     <!-- pop-up -->
     <div class="pop-up">
-        <div class="wrap">
-            <div class="gap">
-                <div class="slide-container">
-                    <div class="slide-view">
-                        <ul class="slide-wrap clearfix">
-
-                            <li class="slide slide1"><!--2/2-->
-                                <span><!-- 여백 -->
-                                    <a href="https://www.airport.kr/co/ko/cmm/cmmBbsView.do?PAGEINDEX=1&SEARCH_STR=&FNCT_CODE=19&SEARCH_TYPE=&NTT_ID=25044&SEARCH_FROM=2005.01.03&SEARCH_TO=2020.11.02"  title="경기도 심야버스 개통 안내">
-                                        <img src="./img/20201102170358756_0.png" alt="경기도 심야버스 개통안내 20.11.1(일)부터 인천공항-경기도 간 심야버스가 신규 운영됩니다. 세부노선은 공지사항을 참고하여 주시기 바랍니다."></a></span>
-                                <span><!-- 여백 -->
-                                    <a href="https://www.airport.kr/co/ko/cmm/cmmBbsView.do?FNCT_CODE=19&NTT_ID=24870" title="코로나19 관련 국가별 입국 제한 현황">
-                                        <img src="./img/20200723132910475_0.png" alt="코로나 19 관련 국가별 입국 제한 현황 코로나19 관련하여 국가별 입국 제한 현황을 사전에 확인하시어, 출국 전 참고하여 주시기 바랍니다."></a></span>
-                            </li>
-
-                            <li class="slide slide0"><!--1/2-->
-                                <span><!-- 여백 -->
-                                    <a href="https://www.airport.kr/ap_cnt/ko/svc/covid19/checkin/checkin.do" title="코로나바이러스감염증-19(COVID-19) 24시간 안전하게 대응하는 인천공항">
-                                        <img src="./img/20200320173103807_0.jpg" alt="코로나바이러스감염증-10(COVID-19) 24시간 안전하게 대응하는 인천공항 자세히 보기"></a></span>
-                                <span><!-- 여백 -->
-                                    <a href="http://ncov.mohw.go.kr/" title="코로나바이러스감염증-19(COVID-19) 신속한 정보를 확인하세요!">
-                                        <img src="./img/2020032017311256_0.png" alt="코로나바이러스감염증-19(COVID-19) 신속한 정보를 확힌하세요! 대한민국 코로나바이러스감염증-19 홈페이지 바로가기"></a></span>
-                            </li>
-
-                            <li class="slide slide1"><!--2/2-->
-                                <span><!-- 여백 -->
-                                    <a href="https://www.airport.kr/co/ko/cmm/cmmBbsView.do?PAGEINDEX=1&SEARCH_STR=&FNCT_CODE=19&SEARCH_TYPE=&NTT_ID=25044&SEARCH_FROM=2005.01.03&SEARCH_TO=2020.11.02" title="경기도 심야버스 개통 안내">
-                                        <img src="./img/20201102170358756_0.png" alt="경기도 심야버스 개통안내 20.11.1(일)부터 인천공항-경기도 간 심야버스가 신규 운영됩니다. 세부노선은 공지사항을 참고하여 주시기 바랍니다."></a></span>
-                                <span><!-- 여백 -->
-                                    <a href="https://www.airport.kr/co/ko/cmm/cmmBbsView.do?FNCT_CODE=19&NTT_ID=24870" title="코로나19 관련 국가별 입국 제한 현황">
-                                        <img src="./img/20200723132910475_0.png" alt="코로나 19 관련 국가별 입국 제한 현황 코로나19 관련하여 국가별 입국 제한 현황을 사전에 확인하시어, 출국 전 참고하여 주시기 바랍니다."></a></span>
-                            </li>
-
-                            <li class="slide slide0"><!--1/2-->
-                                <span><!-- 여백 -->
-                                    <a href="https://www.airport.kr/ap_cnt/ko/svc/covid19/checkin/checkin.do" title="코로나바이러스감염증-19(COVID-19) 24시간 안전하게 대응하는 인천공항">
-                                        <img src="./img/20200320173103807_0.jpg" alt="코로나바이러스감염증-10(COVID-19) 24시간 안전하게 대응하는 인천공항 자세히 보기"></a></span>
-                                <span><!-- 여백 -->
-                                    <a href="http://ncov.mohw.go.kr/" title="코로나바이러스감염증-19(COVID-19) 신속한 정보를 확인하세요!">
-                                        <img src="./img/2020032017311256_0.png" alt="코로나바이러스감염증-19(COVID-19) 신속한 정보를 확힌하세요! 대한민국 코로나바이러스감염증-19 홈페이지 바로가기"></a></span>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
+        <div class="slide-container">
+            <div class="slide-view">
+                <ul class="slide-wrap clearfix">
+                    <li class="slide slide1"><!--2/2-->
+                        <div class="slide-gap"> <!-- 바깥여백 margin -->
+                            <span><!-- 여백 -->
+                                <a href="https://www.airport.kr/co/ko/cmm/cmmBbsView.do?PAGEINDEX=1&SEARCH_STR=&FNCT_CODE=19&SEARCH_TYPE=&NTT_ID=25044&SEARCH_FROM=2005.01.03&SEARCH_TO=2020.11.02"  title="경기도 심야버스 개통 안내">
+                                    <img src="./img/20201102170358756_0.png" alt="경기도 심야버스 개통안내 20.11.1(일)부터 인천공항-경기도 간 심야버스가 신규 운영됩니다. 세부노선은 공지사항을 참고하여 주시기 바랍니다."></a></span>
+                            <span><!-- 여백 -->
+                                <a href="https://www.airport.kr/co/ko/cmm/cmmBbsView.do?FNCT_CODE=19&NTT_ID=24870" title="코로나19 관련 국가별 입국 제한 현황">
+                                    <img src="./img/20200723132910475_0.png" alt="코로나 19 관련 국가별 입국 제한 현황 코로나19 관련하여 국가별 입국 제한 현황을 사전에 확인하시어, 출국 전 참고하여 주시기 바랍니다."></a></span>
+                        </div>
+                    </li>
+                    <li class="slide slide0"><!--1/2-->
+                        <div class="slide-gap"> <!-- 바깥여백 margin -->
+                            <span><!-- 여백 -->
+                                <a href="https://www.airport.kr/ap_cnt/ko/svc/covid19/checkin/checkin.do" title="코로나바이러스감염증-19(COVID-19) 24시간 안전하게 대응하는 인천공항">
+                                    <img src="./img/20200320173103807_0.jpg" alt="코로나바이러스감염증-10(COVID-19) 24시간 안전하게 대응하는 인천공항 자세히 보기"></a></span>
+                            <span><!-- 여백 -->
+                                <a href="http://ncov.mohw.go.kr/" title="코로나바이러스감염증-19(COVID-19) 신속한 정보를 확인하세요!">
+                                    <img src="./img/2020032017311256_0.png" alt="코로나바이러스감염증-19(COVID-19) 신속한 정보를 확힌하세요! 대한민국 코로나바이러스감염증-19 홈페이지 바로가기"></a></span>
+                        </div>
+                    </li>
+                    <li class="slide slide1"><!--2/2-->
+                        <div class="slide-gap"> <!-- 바깥여백 margin -->
+                            <span><!-- 여백 -->
+                                <a href="https://www.airport.kr/co/ko/cmm/cmmBbsView.do?PAGEINDEX=1&SEARCH_STR=&FNCT_CODE=19&SEARCH_TYPE=&NTT_ID=25044&SEARCH_FROM=2005.01.03&SEARCH_TO=2020.11.02" title="경기도 심야버스 개통 안내">
+                                    <img src="./img/20201102170358756_0.png" alt="경기도 심야버스 개통안내 20.11.1(일)부터 인천공항-경기도 간 심야버스가 신규 운영됩니다. 세부노선은 공지사항을 참고하여 주시기 바랍니다."></a></span>
+                            <span><!-- 여백 -->
+                                <a href="https://www.airport.kr/co/ko/cmm/cmmBbsView.do?FNCT_CODE=19&NTT_ID=24870" title="코로나19 관련 국가별 입국 제한 현황">
+                                    <img src="./img/20200723132910475_0.png" alt="코로나 19 관련 국가별 입국 제한 현황 코로나19 관련하여 국가별 입국 제한 현황을 사전에 확인하시어, 출국 전 참고하여 주시기 바랍니다."></a></span>
+                        </div>
+                    </li>
+                    <li class="slide slide0"><!--1/2-->
+                        <div class="slide-gap"> <!-- 바깥여백 margin -->
+                            <span><!-- 여백 -->
+                                <a href="https://www.airport.kr/ap_cnt/ko/svc/covid19/checkin/checkin.do" title="코로나바이러스감염증-19(COVID-19) 24시간 안전하게 대응하는 인천공항">
+                                    <img src="./img/20200320173103807_0.jpg" alt="코로나바이러스감염증-10(COVID-19) 24시간 안전하게 대응하는 인천공항 자세히 보기"></a></span>
+                            <span><!-- 여백 -->
+                                <a href="http://ncov.mohw.go.kr/" title="코로나바이러스감염증-19(COVID-19) 신속한 정보를 확인하세요!">
+                                    <img src="./img/2020032017311256_0.png" alt="코로나바이러스감염증-19(COVID-19) 신속한 정보를 확힌하세요! 대한민국 코로나바이러스감염증-19 홈페이지 바로가기"></a></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-wrap">
+                <div class="left-btn"><a href="javascript:" class="left-btn" title="팝업창 이전 버튼"></a></div>
+                <div class="right-btn"><a href="javascript:" class="right-btn" title="팝업창 다음 버튼"></a></div>
+            </div>
+            <div class="page-wrap">
+                <span class="page-show addPage">1</span>
+                <span class="page-show">/</span>
+                <span class="page-show">2</span>
+                <span class="playBtn"><a href="javascript" title="재생버튼" class="pagePlay"></a></span>
+                <span class="stopBtn"><a href="javascript" title="정지버튼" class="pageStop"></a></span>
             </div>
         </div>
+    </div>
+    
+    <div class="pop-close-btn">
+        <a href="javascript:" class="closeBtn">
+            POPUP
+            <span></span>
+        </a>
     </div>
 
     <header id="header"></header>
@@ -120,6 +138,8 @@
     </main>
     <footer id="footer"></footer>
 </div>
+
+<script src="./js/index.js"></script>
 
 </body>
 </html>
