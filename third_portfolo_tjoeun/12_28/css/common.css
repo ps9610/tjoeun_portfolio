@@ -34,4 +34,4 @@ img {vertical-align:middle;}
 #skip > li > a:focus {line-height:170%;font-size:15px;font-weight:600;border-bottom:2px solid #fff;}
 
 /* wrap */
-#wrap {z-index:1;position:relative;width:100%;overflow:hidden;}
+#wrap {z-index:1;position:relative;width:100%;}

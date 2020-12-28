@@ -26,11 +26,33 @@
 #wrap .pop-up .slide-container .page-wrap .stopBtn {display:block;width:19px;height:20px;background:url(../img/spr_ico_top_popup.png) no-repeat 98% 100%;background-size:44px 107px;}
 #wrap .pop-up .slide-container .page-wrap .page-show.addPage {font-weight:700;}
 
-#wrap .pop-close-btn {z-index:4;position:relative;display:block;margin:0 auto;margin-right:19%;width:73px;height:20px;background:#272936;}
+#wrap .pop-close-btn {z-index:4;position:absolute;display:block;bottom:0;right:0;margin:0 19% -1% 0;width:73px;height:20px;background:#272936;}
 #wrap .pop-close-btn > a {display:inline-block;color:#fff;font-size:13.3333px;line-height:20px;padding:0 8px;}
 #wrap .pop-close-btn > a > span {display:inline-block;line-height:20px;width:10px;height:20px;background:url(../img/spr_ico_popupzone_.png) no-repeat 100% 30%;background-size:30px 6px;}
 #wrap .pop-close-btn > a.addClose > span {background:url(../img/spr_ico_popupzone_.png) no-repeat 0% 30%;background-size:30px 6px;}
 
 
-#wrap #header {z-index:3;position:fixed;width:100%;padding-top:20px;height:101px;}
+#wrap #header {z-index:3;position:fixed;width:100%;height:45px;}
+#wrap #header .wrap {z-index:3;width:100%}
+#wrap #header .wrap .gap {padding:15px 10px 0 10px;background:#bbd;}
+#wrap #header .wrap .gap .content {width:100%;display:flex;flex-flow:row nowrap;justify-content:space-between;}
+
+#wrap #header .wrap .gap .content .left {display:flex;flex-flow:row nowrap;width:263px;}
+#wrap #header .wrap .gap .content .left .airport {display:inline-block;width:50%;}
+#wrap #header .wrap .gap .content .left .corp {display:inline-block;width:50%;}
+#wrap #header .wrap .gap .content .left .airport > a {display:block;line-height:32px;border:1px solid #ccc;}
+#wrap #header .wrap .gap .content .left .airport > a > span {display:block;text-align:center;font-size:0.8125rem;color:#ccc;}
+#wrap #header .wrap .gap .content .left .corp > a {display:block;line-height:32px;border:1px solid #ccc;}
+#wrap #header .wrap .gap .content .left .corp > a > span {display:block;text-align:center;font-size:0.8125rem;color:#ccc;}
+
+
+
+
+#wrap #header .wrap .gap .content .center {}
+#wrap #header .wrap .gap .content .center {}
+#wrap #header .wrap .gap .content .center {}
+#wrap #header .wrap .gap .content .center {}
+#wrap #header .wrap .gap .content .right {display:flex;}
+
+#wrap #main {z-index:2;position:relative;}
 #wrap #footer {z-index:1;position:relative;}
