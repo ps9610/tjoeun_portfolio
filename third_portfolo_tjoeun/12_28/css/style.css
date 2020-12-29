@@ -34,7 +34,7 @@
 
 #wrap #header {z-index:3;position:fixed;width:100%;height:45px;}
 #wrap #header .wrap {z-index:3;width:100%}
-#wrap #header .wrap .gap {padding:15px 10px 0 10px;background:#bbd;}
+#wrap #header .wrap .gap {padding:15px 10px 0 10px;background:#a9a9a9;}
 #wrap #header .wrap .gap .content {width:100%;display:flex;flex-flow:row nowrap;justify-content:space-between;}
 
 #wrap #header .wrap .gap .content .left {display:flex;flex-flow:row nowrap;width:263px;}
@@ -45,14 +45,15 @@
 #wrap #header .wrap .gap .content .left .corp > a {display:block;line-height:32px;border:1px solid #ccc;}
 #wrap #header .wrap .gap .content .left .corp > a > span {display:block;text-align:center;font-size:0.8125rem;color:#ccc;}
 
+#wrap #header .wrap .gap .content .center {width:215px;}
+#wrap #header .wrap .gap .content .center > a {width:100%;display:block;}
+#wrap #header .wrap .gap .content .center > a > img {width:100%;display:block;}
 
-
-
-#wrap #header .wrap .gap .content .center {}
-#wrap #header .wrap .gap .content .center {}
-#wrap #header .wrap .gap .content .center {}
-#wrap #header .wrap .gap .content .center {}
-#wrap #header .wrap .gap .content .right {display:flex;}
+#wrap #header .wrap .gap .content .right {width:366.750px;}
+#wrap #header .wrap .gap .content .right #aside {width:100%;}
+#wrap #header .wrap .gap .content .right #aside > ul {display:flex;}
+#wrap #header .wrap .gap .content .right #aside > ul > li {flex:1 1 auto;}
+#wrap #header .wrap .gap .content .right #aside > ul > li > a {font-size:0.8125rem;color:#fff;}
 
 #wrap #main {z-index:2;position:relative;}
 #wrap #footer {z-index:1;position:relative;}
