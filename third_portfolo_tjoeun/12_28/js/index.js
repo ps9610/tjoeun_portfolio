@@ -3,7 +3,7 @@
         init : function(){
             var that = this;
                 that.popupFn();
-                //that.headerFn();
+                that.headerFn();
                 //that.section01Fn();
                 //that.section02Fn();
                 //that.section03Fn();
@@ -66,7 +66,7 @@
                     if(cnt>1){cnt=0};
                     if(cnt<0){cnt=1};
                     slideWrap.stop().animate({ left : -1004*cnt },0);
-                    console.log(cnt);
+                    
 
                 });
             };
@@ -82,6 +82,15 @@
             
             
             
+        },
+
+        headerFn : function(){
+            var _language = $(".languageBtn");
+            var _multi = $(".multi");
+
+            _language.on("click", function(){
+                _multi.toggleClass("addlang");
+            })
         }
 
 

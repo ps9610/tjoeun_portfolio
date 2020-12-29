@@ -6,7 +6,7 @@ html {overflow-y:scroll;} /* 스크롤바 너비 17px/전체1920px-17px = 1903px
 html.addScroll {overflow:hidden;} /* 모달창에서는 스크롤 없이 설정하려고 */
 body {font:normal 16px/1 "Roboto","sans-serif";color:#444;background:#fff;}
                          /*  1차글꼴   ,    2차글꼴  */
-header, main, footer, section, aside, nav, aside {display: block;}
+header, main, footer, section, aside, nav, aside {display:block;}
 i, em, address {font-style:normal;} /* |가 반듯하게 되게 함*/ 
 
 /* 크로스 브라우징 할때 필요함 : 
