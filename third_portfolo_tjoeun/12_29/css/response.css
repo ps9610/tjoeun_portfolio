@@ -1,14 +1,22 @@
 @media all and (max-width:1200px){
     /*pop-up*/
-    .pop-up .slide-container {width:100%;/* 1160px; */max-width:none;margin:0;padding:0 20px;box-sizing:border-box;}
-    .pop-up .slide-container .slide-view .slide-wrap {width:calc(100%*4)/* 1160px*4 */;left:calc(-100%*0)/* 1160px*0 */;}
-    .pop-up .slide-container .slide-view .slide-wrap .slide {width:25%;/* 1160px */max-width:none;}
-    .pop-up .slide-container .slide-view .slide-wrap .slide .slide-gap {padding:10px 0 12px;}
-    .pop-up .slide-container .slide-view .slide-wrap .slide .slide-gap span {width:100%;margin-bottom:15px;}
-    .pop-up .slide-container .slide-view .slide-wrap .slide .slide-gap span:first-child {margin-right:15px;}
-    .pop-up .slide-container .slide-view .slide-wrap .slide .slide-gap span a {width:100%;}
-    .pop-up .slide-container .slide-view .slide-wrap .slide .slide-gap span a img {width:100%;}
-    .pop-up .slide-container .page-wrap {justify-content:flex-start;}
+    #wrap .pop-up .slide-container {width:100%;/* 1160px; */max-width:none;margin:0;padding:0 20px;box-sizing:border-box;}
+    #wrap .pop-up .slide-container .slide-view .slide-wrap {width:calc(100%*4)/* 1160px*4 */;left:calc(-100%*0)/* 1160px*0 */;}
+    #wrap .pop-up .slide-container .slide-view .slide-wrap .slide {width:25%;/* 1160px */max-width:none;}
+    #wrap .pop-up .slide-container .slide-view .slide-wrap .slide .slide-gap {padding:10px 0 12px;}
+    #wrap .pop-up .slide-container .slide-view .slide-wrap .slide .slide-gap span {width:100%;margin-bottom:15px;}
+    #wrap .pop-up .slide-container .slide-view .slide-wrap .slide .slide-gap span:first-child {margin-right:15px;}
+    #wrap .pop-up .slide-container .slide-view .slide-wrap .slide .slide-gap span a {width:100%;}
+    #wrap .pop-up .slide-container .slide-view .slide-wrap .slide .slide-gap span a img {width:100%;}
+    #wrap .pop-up .slide-container .page-wrap {justify-content:flex-start;}
+    #wrap .pop-close-btn {bottom:-19px;}
+
+    #wrap #header {border-bottom:1px solid transparent;}
+    #wrap #header .wrap .gap .content .left {display:none;}
+    #wrap #header .wrap .gap .content .right {display:none;}
+    #wrap #header .wrap .gap .content .logo > a {background:url(../img/logo.png) no-repeat;}
+    #wrap #header .wrap .gap {background:rgb(255,255,255);}
+    #wrap #header .wrap .gap #nav {display:none;}
 }
 
 @media all and (max-width:800px){
