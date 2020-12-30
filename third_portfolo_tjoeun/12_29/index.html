@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>인천국제공항</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=Emulate10"> -->
+    <meta name="Viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0. maximum-scale=1.6, user-scalable=no">
+    <meta name="Title" content="인천국제공항">
+    <meta name="Publisher" content="프론트엔드 박소혜">
+    <meta name="Author-date" content="2020-12-28"> 
+    <meta name="Author" content="프론트엔드 박소혜">
+    <meta name="Copyright" content="인천국제공항">
+    <meta name="Keywords" content="인천국제공항, 인천국제공항공사, 출발, 도착, 환승, 교통, 주차, 쇼핑, 공항지도, 항공편, 수속, 제1 여객터미널, 제2 여객터미널, 면세점">
+    <meta name="description" content="인천공항 한 눈에 보기 제1여객터미널 안내표 : 제1교통센터, 제1여객터미널로 구성. 제1교통센터, 제1여객터미널. 일반구역, 면세구역, 탑승동. 4F, 전문식당가"> 
+    <meta name="Robots" content="index, follow">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./img/favicon-16x16.png">
+    <link rel="shortcut icon" href="./img/favicon-32x32.png">
+    <link rel="apple-touch-icon" href=".img/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/response.css">
+
+    <!-- 오픈 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- font-awesome 4.0 -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script> <!-- font-awesome 5.0 -->
+
+    <!-- 오픈소스 -->
+    <script src="./js/lib/jquery-1.12.4.min.js"></script>
+    <script src="./js/lib/prefixfree.min.js"></script>
+    <script src="./js/lib/jquery.touchSwipe.js"></script>
+    <script src="./js/lib/jquery.easing.1.3.js"></script>
+
+    <!-- 조건 주석문 익스프롤러 하위 IE9 IE8 IE7 폴리필 -->
+    <!-- 스크립트 스타일 -->
+
+    <!--[if lte IE 9]>
+        <script src="./js/lib/IE9.js"></script>
+    <![endif]-->
+
+    <!--[if lte IE 8]>
+        <script src="./js/lib/html5shiv.min.js"></script>
+        <script src="./js/lib/jqPIE.js"></script>
+        <script src="./js/lib/PIE.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/ie8.css">
+    <![endif]-->
+
+    <!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" href="./css/ie7.css">
+    <![endif]-->
+ 
+</head>
+<body>
+<ul id="skip">
+        <li><a href="#wrap">본문 바로가기</a></li>
+        <li><a href="#header">주 메뉴 바로가기</a></li>
+</ul>
+
+<div id="wrap">
+
+    <!-- pop-up -->
+    <div class="pop-up">
+        <div class="slide-container">
+            <div class="slide-view">
+                <ul class="slide-wrap clearfix">
+                    <li class="slide slide1"><!--2/2-->
+                        <div class="slide-gap"> <!-- 바깥여백 margin -->
+                            <span><!-- 여백 -->
+                                <a href="https://www.airport.kr/co/ko/cmm/cmmBbsView.do?PAGEINDEX=1&SEARCH_STR=&FNCT_CODE=19&SEARCH_TYPE=&NTT_ID=25044&SEARCH_FROM=2005.01.03&SEARCH_TO=2020.11.02"  title="경기도 심야버스 개통 안내">
+                                    <img src="./img/20201102170358756_0.png" alt="경기도 심야버스 개통안내 20.11.1(일)부터 인천공항-경기도 간 심야버스가 신규 운영됩니다. 세부노선은 공지사항을 참고하여 주시기 바랍니다."></a></span>
+                            <span><!-- 여백 -->
+                                <a href="https://www.airport.kr/co/ko/cmm/cmmBbsView.do?FNCT_CODE=19&NTT_ID=24870" title="코로나19 관련 국가별 입국 제한 현황">
+                                    <img src="./img/20200723132910475_0.png" alt="코로나 19 관련 국가별 입국 제한 현황 코로나19 관련하여 국가별 입국 제한 현황을 사전에 확인하시어, 출국 전 참고하여 주시기 바랍니다."></a></span>
+                        </div>
+                    </li>
+                    <li class="slide slide0"><!--1/2-->
+                        <div class="slide-gap"> <!-- 바깥여백 margin -->
+                            <span><!-- 여백 -->
+                                <a href="https://www.airport.kr/ap_cnt/ko/svc/covid19/checkin/checkin.do" title="코로나바이러스감염증-19(COVID-19) 24시간 안전하게 대응하는 인천공항">
+                                    <img src="./img/20200320173103807_0.jpg" alt="코로나바이러스감염증-10(COVID-19) 24시간 안전하게 대응하는 인천공항 자세히 보기"></a></span>
+                            <span><!-- 여백 -->
+                                <a href="http://ncov.mohw.go.kr/" title="코로나바이러스감염증-19(COVID-19) 신속한 정보를 확인하세요!">
+                                    <img src="./img/2020032017311256_0.png" alt="코로나바이러스감염증-19(COVID-19) 신속한 정보를 확힌하세요! 대한민국 코로나바이러스감염증-19 홈페이지 바로가기"></a></span>
+                        </div>
+                    </li>
+                    <li class="slide slide1"><!--2/2-->
+                        <div class="slide-gap"> <!-- 바깥여백 margin -->
+                            <span><!-- 여백 -->
+                                <a href="https://www.airport.kr/co/ko/cmm/cmmBbsView.do?PAGEINDEX=1&SEARCH_STR=&FNCT_CODE=19&SEARCH_TYPE=&NTT_ID=25044&SEARCH_FROM=2005.01.03&SEARCH_TO=2020.11.02" title="경기도 심야버스 개통 안내">
+                                    <img src="./img/20201102170358756_0.png" alt="경기도 심야버스 개통안내 20.11.1(일)부터 인천공항-경기도 간 심야버스가 신규 운영됩니다. 세부노선은 공지사항을 참고하여 주시기 바랍니다."></a></span>
+                            <span><!-- 여백 -->
+                                <a href="https://www.airport.kr/co/ko/cmm/cmmBbsView.do?FNCT_CODE=19&NTT_ID=24870" title="코로나19 관련 국가별 입국 제한 현황">
+                                    <img src="./img/20200723132910475_0.png" alt="코로나 19 관련 국가별 입국 제한 현황 코로나19 관련하여 국가별 입국 제한 현황을 사전에 확인하시어, 출국 전 참고하여 주시기 바랍니다."></a></span>
+                        </div>
+                    </li>
+                    <li class="slide slide0"><!--1/2-->
+                        <div class="slide-gap"> <!-- 바깥여백 margin -->
+                            <span><!-- 여백 -->
+                                <a href="https://www.airport.kr/ap_cnt/ko/svc/covid19/checkin/checkin.do" title="코로나바이러스감염증-19(COVID-19) 24시간 안전하게 대응하는 인천공항">
+                                    <img src="./img/20200320173103807_0.jpg" alt="코로나바이러스감염증-10(COVID-19) 24시간 안전하게 대응하는 인천공항 자세히 보기"></a></span>
+                            <span><!-- 여백 -->
+                                <a href="http://ncov.mohw.go.kr/" title="코로나바이러스감염증-19(COVID-19) 신속한 정보를 확인하세요!">
+                                    <img src="./img/2020032017311256_0.png" alt="코로나바이러스감염증-19(COVID-19) 신속한 정보를 확힌하세요! 대한민국 코로나바이러스감염증-19 홈페이지 바로가기"></a></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-wrap">
+                <div class="left-btn"><a href="javascript:" class="left-btn" title="팝업창 이전 버튼"></a></div>
+                <div class="right-btn"><a href="javascript:" class="right-btn" title="팝업창 다음 버튼"></a></div>
+            </div>
+            <div class="page-wrap">
+                <span class="page-show addPage">1</span>
+                <span class="page-show">/</span>
+                <span class="page-show">2</span>
+                <span class="playBtn"><a href="javascript" title="재생버튼" class="pagePlay"></a></span>
+                <span class="stopBtn"><a href="javascript" title="정지버튼" class="pageStop"></a></span>
+            </div>
+        </div>
+    </div>
+    <div class="pop-close-btn">
+        <a href="javascript:" class="closeBtn">
+            POPUP
+            <span></span>
+        </a>
+    </div>
+
+    <header id="header">
+        <div class="wrap">
+            <div class="gap">
+                <ul class="content">
+
+                    <li class="left">
+                        <div class="airport">
+                            <a href="http://sohye.dothome.co.kr/airport/">
+                                <span>인천국제공항</span>
+                            </a>
+                        </div>
+                        <div class="corp">
+                            <a href="https://www.airport.kr/co/ko/index.do">
+                                <span>인천국제공항공사</span>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="logo">
+                        <a href="http://sohye.dothome.co.kr/airport/" title="인천국제공항 바로가기"></a>
+                    </li>
+
+                    <li class="right">
+                        <aside id="aside">
+
+                            <ul>
+                                <li><a href="javascript:" title="로그인">로그인</a></li><!-- 팝업창 -->
+                                <li><a href="https://www.airport.kr/ap/ko/cmm/memberRegGuide.do" title="회원가입">회원가입</a></li>
+                                <li><a href="https://www.airport.kr/ap/ko/cus/faqList.do" title="고객센터">고객센터</a></li>
+                                <li><a href="https://www.airport.kr/ap_cnt/ko/cmm/sitemap/sitemap.do" title="사이트맵">사이트맵</a></li>
+                            </ul>
+                            
+                            <div class="language">
+                                <a href="javascript:" class="languageBtn" title="language">Language<span><i></i></span></a>
+                            </div>
+                            <div class="multi">
+                                <a href="https://www.airport.kr/ap/ko/index.do" title="인천국제공항 한국어 사이트 바로가기">한국어</a>
+                                <a href="https://www.airport.kr/ap/en/index.do" title="Incheon International Airport English Website">English</a>
+                                <a href="https://www.airport.kr/ap/ch/index.do" title="仁川国际机场中文网站">中文</a>
+                                <a href="https://www.airport.kr/ap/ja/index.do" title="仁川国際空港 日本語ウェブサイト">日本語</a>
+                            </div>
+                        </aside>    
+                    </li>
+
+                </ul>
+                <nav id="nav">
+                    <div class="nav-gap">
+                        <ul class="nav-content">
+                            <li class="main-btn"><a href="javascript:" title="출발">출발</a></li>
+                            <li class="main-btn"><a href="javascript:" title="도착">도착</a></li>
+                            <li class="main-btn"><a href="javascript:" title="환승">환승</a></li>
+                            <li class="main-btn"><a href="javascript:" title="교통·주차">교통·주차</a></li>
+                            <li class="main-btn"><a href="javascript:" title="쇼핑·식당">쇼핑·식당</a></li>
+                            <li class="main-btn"><a href="javascript:" title="안내·서비스">안내·서비스</a></li>
+                        </ul>
+                        <ul class="nav-side">
+                            <li class="side-btn">
+                                <a href="https://www.airport.kr/ap/ko/map/mapInfo.do">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>공항지도</span>
+                                </a>
+                            </li>
+                            <li class="side-btn">
+                                <a href="javascript:">
+                                    <i class="fas fa-search"></i>
+                                    <span>검색</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main id="main">
+        <section id="section01"></section>
+        <section id="section02"></section>
+        <section id="section03"></section>
+    </main>
+    <footer id="footer"></footer>
+</div>
+
+<script src="./js/index.js"></script>
+
+</body>
+</html>
