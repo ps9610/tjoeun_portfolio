@@ -56,8 +56,8 @@
 #wrap #mobile #mobile-menu .whole-wrap .mMenu-main .wrap .gap .content > li .mobile-title.addSide > i {background:url(../img/spr_ico_global.png) no-repeat 89.4% 25%;}
 #wrap #mobile #mobile-menu .whole-wrap .mMenu-main .wrap .gap .content > li .mobile-side {display:none;}
 #wrap #mobile #mobile-menu .whole-wrap .mMenu-main .wrap .gap .content > li .mobile-side > a {display:flex;padding:5px 0 0 10px;flex-direction:column;line-height:32px;font-size:1.05rem;}
+#wrap #mobile #mobile-menu .whole-wrap .mMenu-main .wrap .gap .content > li .mobile-side:last-child > a {padding:5px 0 10px 10px;}
 #wrap #mobile #mobile-menu .whole-wrap .mMenu-main .wrap .gap .content > li .mobile-side.addSide {display:block;}
-#wrap #mobile #mobile-menu .whole-wrap .mMenu-main .wrap .gap .content > li .mobile-side:last-child.addSide {padding-bottom:10px;}
 
 #wrap #mobile #mobile-menu .whole-wrap .mMenu-main .wrap .gap .footer-row1 {display:block;}
 #wrap #mobile #mobile-menu .whole-wrap .mMenu-main .wrap .gap .footer-row1 > ul {display:flex;}

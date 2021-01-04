@@ -195,7 +195,7 @@
 #wrap #header .sub-bg .gap .content > li > ul  > li > a:hover {color:#42519e;}
 #wrap #header .sub-bg .gap .content > li > ul  > li > a:focus {color:#42519e;}
 
-
-
 #wrap #main {z-index:2;position:relative;}
+#wrap #main #section01 {}
+
 #wrap #footer {z-index:1;position:relative;}

@@ -118,10 +118,10 @@
             setTimeout( popMainSlideFn,100 );
             function popMainSlideFn(){
 
-                slideWrap.stop().animate({ left : -1004*cnt },600,function(){
+                slideWrap.stop().animate({ left : -502*cnt },600,function(){
                     if(cnt>1){cnt=0};
                     if(cnt<0){cnt=1};
-                    slideWrap.stop().animate({ left : -1004*cnt },0);
+                    slideWrap.stop().animate({ left : -502*cnt },0);
                 });
             };
             
@@ -154,6 +154,7 @@
             .on("focusin", function(){
                 _header.addClass("addSub");
             });
+
             _header.on("mouseleave", function(){
                 _header.removeClass("addSub");
             })

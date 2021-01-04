@@ -25,17 +25,39 @@
             var _contentRate = 1.222222222;
             var _window = $(window);
             var _popUp = $(".pop-up");
+            var t = 0;
             
             //모바일 메뉴 클릭이벤트
+            // _mobileTitle.each(function(idx){
+            //     var _this = $(this);
+            //     _this.on("click", function(e){
+            //         e.preventDefault();
+            //         // console.log(_this);
+            //         _mobileTitle.removeClass("addSide");
+            //         _mobileSide.removeClass("addSide");
+            //         _mobileTitle.eq(idx).addClass("addSide");
+            //         _mobileSide.eq(idx).addClass("addSide");
+            //     })
+            // })
+
+            //아코디언메뉴 -> 오류수정확인! 토글변수사용시 조건문에 논리형으로 쓰는것!
             _mobileTitle.each(function(idx){
                 var _this = $(this);
                 _this.on("click", function(e){
                     e.preventDefault();
-                    console.log(_this);
+                    // console.log(_this);
                     _mobileTitle.removeClass("addSide");
-                    _mobileSide.removeClass("addSide");
-                    _mobileTitle.eq(idx).addClass("addSide");
-                    _mobileSide.eq(idx).addClass("addSide");
+                    if(t==0){
+                        t=1;
+                        _this.addClass("addSide");
+                    }
+                    else if(t==1){
+                        _this.removeClass("addSide");
+                        t=0;
+                    }
+                    alert(t)
+                    _mobileSide.stop().slideUp(100);
+                    _this.next().stop().slideToggle(100);
                 })
             })
 
@@ -108,6 +130,7 @@
             function popNextSlideFn(){
                 cnt++;
                 popMainSlideFn();
+                console.log(cnt);
             };
 
             function popPrevSlideFn(){
@@ -118,10 +141,10 @@
             setTimeout( popMainSlideFn,100 );
             function popMainSlideFn(){
 
-                slideWrap.stop().animate({ left : -1004*cnt },600,function(){
-                    if(cnt>1){cnt=0};
-                    if(cnt<0){cnt=1};
-                    slideWrap.stop().animate({ left : -1004*cnt },0);
+                slideWrap.stop().animate({ left : (-1004*cnt/2)},600,function(){
+                    if(cnt>2){cnt=0};
+                    if(cnt<0){cnt=2};
+                    slideWrap.stop().animate({ left : (-1004*cnt/2) },0);
                 });
             };
             
@@ -153,8 +176,8 @@
             })
             .on("focusin", function(){
                 _header.addClass("addSub");
-            });
-            _header.on("mouseleave", function(){
+            })
+            .on("mouseleave", function(){
                 _header.removeClass("addSub");
             })
             .on("focusout", function(){
