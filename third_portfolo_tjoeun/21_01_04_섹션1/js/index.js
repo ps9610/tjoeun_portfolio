@@ -153,8 +153,8 @@
             })
             .on("focusin", function(){
                 _header.addClass("addSub");
-            })
-            .on("mouseleave", function(){
+            });
+            _header.on("mouseleave", function(){
                 _header.removeClass("addSub");
             })
             .on("focusout", function(){
