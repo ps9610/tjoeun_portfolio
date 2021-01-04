@@ -26,6 +26,7 @@
             var _window = $(window);
             var _popUp = $(".pop-up");
             
+            //모바일 메뉴 클릭이벤트
             _mobileTitle.each(function(idx){
                 var _this = $(this);
                 _this.on("click", function(e){
@@ -35,10 +36,10 @@
                     _mobileSide.removeClass("addSide");
                     _mobileTitle.eq(idx).addClass("addSide");
                     _mobileSide.eq(idx).addClass("addSide");
-
                 })
             })
 
+            //모바일 메뉴(햄버거버튼) 클릭이벤트
             _mobileMenuBtn.on("click", function(){
                 _wholeWrap.stop().animate({ left:0 },300);
                 _mobile.addClass("addMoMenu");
@@ -47,6 +48,8 @@
 
                 _html.addClass("addScroll");
             })
+
+            //모바일 메뉴 닫기버튼 클릭이벤트
             _closeBtn.on("click", function(){
                 _wholeWrap.stop().animate({ left:-1000 },300);
                 _mobile.removeClass("addMoMenu");
@@ -55,6 +58,7 @@
                 _html.addClass("removeScroll");
             })
 
+            //모바일 메뉴 높이 반응형 조정
             function resizeFn(){
                 _content.css({ marginBottom : _contentH*_contentRate });
             };
@@ -91,7 +95,7 @@
             });
 
 
-            // closebtn
+            // 팝업창 닫기 버튼
             closeBtn
             .on("click", function(){
                 var _this = $(this);
@@ -100,7 +104,7 @@
                 _header.toggleClass("addClose");
             });
 
-            //슬라이드
+            //팝업창 슬라이드
             function popNextSlideFn(){
                 cnt++;
                 popMainSlideFn();
@@ -128,6 +132,7 @@
             leftBtn.on("click",function(){
                 popPrevSlideFn();
             });
+
         },
 
         headerFn : function(){
@@ -136,10 +141,12 @@
             var _multi = $("#header .multi");
             var _nav = $("#header .mainBtn");
 
+            //헤더 오른쪽 다국어 select 클릭이벤트
             _language.on("click", function(){
                 _multi.toggleClass("addLang");
             });
 
+            // 메인메뉴에 hover시 서브메뉴 보이고 없어지기
             _nav
             .on("mouseenter", function(){
                 _header.addClass("addSub");
