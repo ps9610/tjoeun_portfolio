@@ -1,7 +1,5 @@
 @media all and (max-width:1200px){
     /*pop-up*/
-    #wrap .pop-up {display:none;margin-top:60px;}
-    #wrap .pop-up.addClose {margin-top:-229px;}
     #wrap .pop-up .slide-container {z-index:1;position:relative;width:100%;max-width:100%;margin:0}
     #wrap .pop-up .slide-container .slide-view .slide-wrap {position:relative;width:calc(100%*4)/* (1004px*4) */;margin-left:-100%;}
     #wrap .pop-up .slide-container .slide-view .slide-wrap .slide {float:left;width:25%;max-width:100%;}
@@ -16,6 +14,9 @@
     #wrap .pop-up .slide-container .btn-wrap .right-btn {right:3.8%;width:1.3333vw;height:2.5vw;}
 
     #wrap #header {display:none;}
+    #wrap #mobile {display:block;}
+    #wrap .pop-up {top:60px;}
+    #wrap .pop-up.addClose {margin-top:0;top:-229px;}
     
 }
 
@@ -25,7 +26,7 @@
 
 @media all and (max-width:800px){
     .pop-up .slide-container .slide-view .slide-wrap .slide .slide-gap {display:block;}
-    
+
     #wrap #mobile #mobile-menu .whole-wrap .mMenu-header .wrap {width:80%;}
     #wrap #mobile #mobile-menu .whole-wrap .mMenu-main .wrap {width:80%;}
     #wrap #mobile #mobile-menu .whole-wrap .mMenu-footer .wrap {width:80%;}

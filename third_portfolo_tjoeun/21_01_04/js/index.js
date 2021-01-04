@@ -22,9 +22,9 @@
             var _html = $("html");
             var _content = _moblieMenu.find(".content");
             var _contentH = _content.innerHeight();
-            var _mobileMenuHeader = _moblieMenu.find(".mMenu-header").innerHeight();
             var _contentRate = 1.222222222;
             var _window = $(window);
+            var _popUp = $(".pop-up");
             
             _mobileTitle.each(function(idx){
                 var _this = $(this);
@@ -43,12 +43,15 @@
                 _wholeWrap.stop().animate({ left:0 },300);
                 _mobile.addClass("addMoMenu");
                 _moblieMenu.css({zIndex : 3});
+                _popUp.css({zIndex : 2});
+
                 _html.addClass("addScroll");
             })
             _closeBtn.on("click", function(){
                 _wholeWrap.stop().animate({ left:-1000 },300);
                 _mobile.removeClass("addMoMenu");
                 _moblieMenu.css({zIndex : 1});
+                _popUp.css({zIndex : 4});
                 _html.addClass("removeScroll");
             })
 
@@ -70,13 +73,14 @@
 
             var popCloseBtn = $(".pop-close-btn")
             var closeBtn = popCloseBtn.find(".closeBtn");
+            var _header = $("#header");
 
             var cnt = 0;
             var leftBtn = popUp.find(".left-btn");
             var rightBtn = popUp.find(".right-btn");
             
            setTimeout(resizeFn,100);
-            // 창넓이 1200이하부터 슬라이드 자동없어짐
+            // 창넓이 1200이하부터 팝업창 자동없어짐
             function resizeFn(){
                 if( _winW <= 1200 )
                 popUp.addClass("addClose");
@@ -93,6 +97,7 @@
                 var _this = $(this);
                 _this.toggleClass("addClose");
                 popUp.toggleClass("addClose");
+                _header.toggleClass("addClose");
             });
 
             //슬라이드
@@ -113,8 +118,6 @@
                     if(cnt>1){cnt=0};
                     if(cnt<0){cnt=1};
                     slideWrap.stop().animate({ left : -1004*cnt },0);
-                    
-
                 });
             };
             
@@ -128,12 +131,28 @@
         },
 
         headerFn : function(){
+            var _header = $("#header");
             var _language = $("#header .languageBtn");
             var _multi = $("#header .multi");
+            var _nav = $("#header .mainBtn");
 
             _language.on("click", function(){
                 _multi.toggleClass("addLang");
+            });
+
+            _nav
+            .on("mouseenter", function(){
+                _header.addClass("addSub");
             })
+            .on("focusin", function(){
+                _header.addClass("addSub");
+            })
+            .on("mouseleave", function(){
+                _header.removeClass("addSub");
+            })
+            .on("focusout", function(){
+                _header.removeClass("addSub");
+            });
         }
     }
 
