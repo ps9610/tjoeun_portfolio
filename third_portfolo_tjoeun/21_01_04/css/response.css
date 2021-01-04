@@ -25,4 +25,11 @@
 
 @media all and (max-width:800px){
     .pop-up .slide-container .slide-view .slide-wrap .slide .slide-gap {display:block;}
+    
+    #wrap #mobile #mobile-menu .whole-wrap .mMenu-header .wrap {width:80%;}
+    #wrap #mobile #mobile-menu .whole-wrap .mMenu-main .wrap {width:80%;}
+    #wrap #mobile #mobile-menu .whole-wrap .mMenu-footer .wrap {width:80%;}
+}
+@media all and (max-width:500px){
+    #wrap #mobile #mobile-menu .whole-wrap .mMenu-header .wrap .gap .row2 > li {padding-right:11px;}
 }

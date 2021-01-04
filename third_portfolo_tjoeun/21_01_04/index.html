@@ -8,7 +8,7 @@
     <meta name="Viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0. maximum-scale=1.6, user-scalable=no">
     <meta name="Title" content="인천국제공항">
     <meta name="Publisher" content="프론트엔드 박소혜">
-    <meta name="Author-date" content="2021-01-02"> 
+    <meta name="Author-date" content="2021-01-04"> 
     <meta name="Author" content="프론트엔드 박소혜">
     <meta name="Copyright" content="인천국제공항">
     <meta name="Keywords" content="인천국제공항, 인천국제공항공사, 출발, 도착, 환승, 교통, 주차, 쇼핑, 공항지도, 항공편, 수속, 제1 여객터미널, 제2 여객터미널, 면세점">
@@ -84,8 +84,8 @@
 
     <!-- mobile menu -->
         <div id="mobile-menu">
-            <!-- mobile-header -->
-            <div class="mMenu-header">
+            <div class="whole-wrap">
+                <div class="mMenu-header">
             <div class="wrap">
                 <div class="gap">
                     <ul class="row1">
@@ -102,7 +102,7 @@
                             </a>
                         </li>
                         <li class="close-btn">
-                            <a href="#" title="모바일 메뉴닫기">
+                            <a href="#" class="closeBtn" title="모바일 메뉴닫기">
                                 <i></i>
                                 <i></i>
                             </a>
@@ -116,92 +116,131 @@
                     </ul>
                 </div>
             </div>
-            </div>
-            <div class="mMenu-main">
-            <div class="wrap">
-                <div class="gap">
-                    <ul class="content">
-                        <li>
-                            <a href="javascript:" class="mobile-title" title="출발">
-                                <span>출발</span>
-                                <i></i>
-                            </a>
-                            <span class="mobile-side">
-                                <a href="javascript:" title="출발시간">출발시간</a>
-                                <a href="javascript:" title="출발절차">출발절차</a>
-                                <a href="javascript:" title="출발체크사항">출발체크사항</a>
-                                <a href="javascript:" title="취항정보">취항정보</a>
-                            </span>
-                        </li>
-
-                        <li>
-                            <a href="javascript:" class="mobile-title" title="도착">
-                                <span>도착</span>
-                                <i></i>
-                            </a>
-                            <span class="mobile-side">
-                                <a href="javascript:" title="도착시간">도착시간</a>
-                                <a href="javascript:" title="입국절차">입국절차</a>
-                                <a href="javascript:" title="환영안내">환영안내</a>
-                            </span>
-                        </li>
-
-                        <li>
-                            <a href="javascript:" class="mobile-title" title="환승">
-                                <span>환승</span>
-                                <i></i>
-                            </a>
-                            <span class="mobile-side">
-                                <a href="javascript:" title="환승안내">환승안내</a>
-                                <a href="javascript:" title="환승편의시설">환승편의시설</a>
-                                <a href="javascript:" title="환승투어">환승투어</a>
-                            </span>
-                        </li>
-
-                        <li>
-                            <a href="javascript:" class="mobile-title" title="교통·주차">
-                                <span>교통·주차</span>
-                                <i></i>
-                            </a>
-                            <span class="mobile-side">
-                                <a href="javascript:" title="오시는길">오시는길</a>
-                                <a href="javascript:" title="주차안내">주차안내</a>
-                                <a href="javascript:" title="대중교통">대중교통</a>
-                                <a href="javascript:" title="공항셔틀버스">공항셔틀버스</a>
-                                <a href="javascript:" title="렌터카">렌터카</a>
-                            </span>
-                        </li>
-
-                        <li>
-                            <a href="javascript:" class="mobile-title" title="쇼핑·식당">
-                                <span>쇼핑·식당</span>
-                                <i></i>
-                            </a>
-                            <span class="mobile-side">
-                                <a href="javascript:" title="면세점쇼핑">면세점쇼핑</a>
-                                <a href="javascript:" title="일반쇼핑">일반쇼핑</a>
-                                <a href="javascript:" title="식당">식당</a>
-                                <a href="javascript:" title="이벤트">이벤트</a>
-                            </span>
-                        </li>
-
-                        <li>
-                            <a href="javascript:" class="mobile-title" title="안내·서비스">
-                                <span>안내·서비스</span>
-                                <i></i>
-                            </a>
-                            <span class="mobile-side">
-                                <a href="javascript:" title="터미널안내">터미널안내</a>
-                                <a href="javascript:" title=공항지도">공항지도</a>
-                                <a href="javascript:" title=안내·편의시설">안내·편의시설</a>
-                                <a href="javascript:" title="공항즐기기">공항즐기기</a>
-                                <a href="javascript:" title="맞춤형 서비스">맞춤형 서비스</a>
-                            </span>
-                        </li>
-
-                    </ul>
                 </div>
-            </div>
+                <div class="mMenu-main">
+                    <div class="wrap">
+                        <div class="gap">
+                            
+                            <ul class="content">
+                                <li>
+                                    <a href="javascript:" class="mobile-title" title="출발">
+                                        <span>출발</span>
+                                        <i></i>
+                                    </a>
+                                    <span class="mobile-side">
+                                        <a href="javascript:" title="출발시간">출발시간</a>
+                                        <a href="javascript:" title="출발절차">출발절차</a>
+                                        <a href="javascript:" title="출발체크사항">출발체크사항</a>
+                                        <a href="javascript:" title="취항정보">취항정보</a>
+                                    </span>
+                                </li>
+                            
+                                <li>
+                                    <a href="javascript:" class="mobile-title" title="도착">
+                                        <span>도착</span>
+                                        <i></i>
+                                    </a>
+                                    <span class="mobile-side">
+                                        <a href="javascript:" title="도착시간">도착시간</a>
+                                        <a href="javascript:" title="입국절차">입국절차</a>
+                                        <a href="javascript:" title="환영안내">환영안내</a>
+                                    </span>
+                                </li>
+                            
+                                <li>
+                                    <a href="javascript:" class="mobile-title" title="환승">
+                                        <span>환승</span>
+                                        <i></i>
+                                    </a>
+                                    <span class="mobile-side">
+                                        <a href="javascript:" title="환승안내">환승안내</a>
+                                        <a href="javascript:" title="환승편의시설">환승편의시설</a>
+                                        <a href="javascript:" title="환승투어">환승투어</a>
+                                    </span>
+                                </li>
+                            
+                                <li>
+                                    <a href="javascript:" class="mobile-title" title="교통·주차">
+                                        <span>교통·주차</span>
+                                        <i></i>
+                                    </a>
+                                    <span class="mobile-side">
+                                        <a href="javascript:" title="오시는길">오시는길</a>
+                                        <a href="javascript:" title="주차안내">주차안내</a>
+                                        <a href="javascript:" title="대중교통">대중교통</a>
+                                        <a href="javascript:" title="공항셔틀버스">공항셔틀버스</a>
+                                        <a href="javascript:" title="렌터카">렌터카</a>
+                                    </span>
+                                </li>
+                            
+                                <li>
+                                    <a href="javascript:" class="mobile-title" title="쇼핑·식당">
+                                        <span>쇼핑·식당</span>
+                                        <i></i>
+                                    </a>
+                                    <span class="mobile-side">
+                                        <a href="javascript:" title="면세점쇼핑">면세점쇼핑</a>
+                                        <a href="javascript:" title="일반쇼핑">일반쇼핑</a>
+                                        <a href="javascript:" title="식당">식당</a>
+                                        <a href="javascript:" title="이벤트">이벤트</a>
+                                    </span>
+                                </li>
+                            
+                                <li>
+                                    <a href="javascript:" class="mobile-title" title="안내·서비스">
+                                        <span>안내·서비스</span>
+                                        <i></i>
+                                    </a>
+                                    <span class="mobile-side">
+                                        <a href="javascript:" title="터미널안내">터미널안내</a>
+                                        <a href="javascript:" title=공항지도">공항지도</a>
+                                        <a href="javascript:" title=안내·편의시설">안내·편의시설</a>
+                                        <a href="javascript:" title="공항즐기기">공항즐기기</a>
+                                        <a href="javascript:" title="맞춤형 서비스">맞춤형 서비스</a>
+                                    </span>
+                                </li>
+                            </ul>
+                            <div class="footer-row1">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.airport.kr/ap/ko/index.do" title="인천국제공항 한국어 사이트 바로가기">한국어
+                                        </a>
+                                        <i>|</i>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.airport.kr/ap/en/index.do" title="Incheon International Airport English Website">English
+                                        </a>
+                                        <i>|</i>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.airport.kr/ap/ch/index.do" title="仁川国际机场中文网站">中文
+                                        </a>
+                                        <i>|</i>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.airport.kr/ap/ja/index.do" title="仁川国際空港 日本語ウェブサイト">日本語
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-row2">
+                                <ul>
+                                    <li class="airport">
+                                        <a href="http://sohye.dothome.co.kr/airport/">
+                                            <span>인천국제공항</span>
+                                        </a>
+                                    </li>
+                                    <li class="corp">
+                                        <a href="https://www.airport.kr/co/ko/index.do">
+                                            <span>인천국제공항공사</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

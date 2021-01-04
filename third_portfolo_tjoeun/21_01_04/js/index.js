@@ -12,8 +12,19 @@
         },
         mobileFn :function(){
             
-            var _mobileTitle = $("#mobile").find(".mobile-title");
-            var _mobileSide = $("#mobile").find(".mobile-side");
+            var _mobile = $("#mobile");
+            var _mobileTitle = _mobile.find(".mobile-title");
+            var _mobileSide = _mobile.find(".mobile-side");
+            var _closeBtn = _mobile.find(".closeBtn");
+            var _mobileMenuBtn = _mobile.find(".mMenuBtn");
+            var _wholeWrap = _mobile.find(".whole-wrap");
+            var _moblieMenu = _mobile.find("#mobile-menu");
+            var _html = $("html");
+            var _content = _moblieMenu.find(".content");
+            var _contentH = _content.innerHeight();
+            var _mobileMenuHeader = _moblieMenu.find(".mMenu-header").innerHeight();
+            var _contentRate = 1.222222222;
+            var _window = $(window);
             
             _mobileTitle.each(function(idx){
                 var _this = $(this);
@@ -28,6 +39,26 @@
                 })
             })
 
+            _mobileMenuBtn.on("click", function(){
+                _wholeWrap.stop().animate({ left:0 },300);
+                _mobile.addClass("addMoMenu");
+                _moblieMenu.css({zIndex : 3});
+                _html.addClass("addScroll");
+            })
+            _closeBtn.on("click", function(){
+                _wholeWrap.stop().animate({ left:-1000 },300);
+                _mobile.removeClass("addMoMenu");
+                _moblieMenu.css({zIndex : 1});
+                _html.addClass("removeScroll");
+            })
+
+            function resizeFn(){
+                _content.css({ marginBottom : _contentH*_contentRate });
+            };
+
+            _window.resize(function(){
+                resizeFn();
+            })
         },
 
         popupFn : function(){
