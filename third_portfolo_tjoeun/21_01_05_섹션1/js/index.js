@@ -18,6 +18,7 @@
             var _closeBtn = _mobile.find(".closeBtn");
             var _mobileMenuBtn = _mobile.find(".mMenuBtn");
             var _wholeWrap = _mobile.find(".whole-wrap");
+            var _wholeWrapH = _wholeWrap.innerHeight();
             var _moblieMenu = _mobile.find("#mobile-menu");
             var _html = $("html");
             var _content = _moblieMenu.find(".content");
@@ -25,21 +26,9 @@
             var _contentRate = 1.222222222;
             var _window = $(window);
             var _popUp = $(".pop-up");
+            var _windowH = _window.innerHeight();
             var t = 0;
             
-            //모바일 메뉴 클릭이벤트
-            // _mobileTitle.each(function(idx){
-            //     var _this = $(this);
-            //     _this.on("click", function(e){
-            //         e.preventDefault();
-            //         // console.log(_this);
-            //         _mobileTitle.removeClass("addSide");
-            //         _mobileSide.removeClass("addSide");
-            //         _mobileTitle.eq(idx).addClass("addSide");
-            //         _mobileSide.eq(idx).addClass("addSide");
-            //     })
-            // })
-
             //아코디언메뉴 -> 오류수정확인! 토글변수사용시 조건문에 논리형으로 쓰는것!
             _mobileTitle.each(function(idx){
                 var _this = $(this);
@@ -55,7 +44,7 @@
                         _this.removeClass("addSide");
                         t=0;
                     }
-                    alert(t)
+                    //alert(t);
                     _mobileSide.stop().slideUp(100);
                     _this.next().stop().slideToggle(100);
                 })
@@ -82,6 +71,8 @@
 
             //모바일 메뉴 높이 반응형 조정
             function resizeFn(){
+                _contentH.css({ height : _windowH });
+                console.log( _contentH );
                 _content.css({ marginBottom : _contentH*_contentRate });
             };
 
@@ -163,6 +154,8 @@
             var _language = $("#header .languageBtn");
             var _multi = $("#header .multi");
             var _nav = $("#header .mainBtn");
+            var _subBg = $("#header .sub-bg");
+            var _navSubBg = $("#header .mainBtn, #header .sub-bg");
 
             //헤더 오른쪽 다국어 select 클릭이벤트
             _language.on("click", function(){
@@ -176,8 +169,13 @@
             })
             .on("focusin", function(){
                 _header.addClass("addSub");
+            });
+            
+            _subBg.on("mouseenter", function(){
+                _header.addClass("addSub");
             })
-            .on("mouseleave", function(){
+            
+            _navSubBg.on("mouseleave", function(){
                 _header.removeClass("addSub");
             })
             .on("focusout", function(){
