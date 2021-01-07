@@ -8,7 +8,7 @@
     <meta name="Viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0. maximum-scale=1.6, user-scalable=no">
     <meta name="Title" content="인천국제공항">
     <meta name="Publisher" content="프론트엔드 박소혜">
-    <meta name="Author-date" content="2021-01-06"> 
+    <meta name="Author-date" content="2021-01-07"> 
     <meta name="Author" content="프론트엔드 박소혜">
     <meta name="Copyright" content="인천국제공항">
     <meta name="Keywords" content="인천국제공항, 인천국제공항공사, 출발, 도착, 환승, 교통, 주차, 쇼핑, 공항지도, 항공편, 수속, 제1 여객터미널, 제2 여객터미널, 면세점">
@@ -454,22 +454,18 @@
                                     <li class="slide slide0">
                                         <h2>Incheon Airport</h2>
                                         <h3>공항, 그 한계를 뛰어넘다</h3>
-                                        <img src="./img/slide0.jpg" alt="공항, 그 한계를 뛰어넘다">
                                     </li>
                                     <li class="slide slide1">
                                         <h2>Incheon Airport</h2>
                                         <h3>감동, 그 기대를 뛰어넘다</h3>
-                                        <img src="./img/slide1.jpg" alt="감동, 그 기대를 뛰어넘다">
                                     </li>
                                     <li class="slide slide2">
                                         <h2>Incheon Airport</h2>
                                         <h3>예술, 그 가치를 뛰어넘다</h3>
-                                        <img src="./img/slide2.jpg" alt="예술, 그 가치를 뛰어넘다">
                                     </li>
                                     <li class="slide slide3">
                                         <h2>Incheon Airport</h2>
                                         <h3>기술, 그 상상을 뛰어넘다</h3>
-                                        <img src="./img/slide3.jpg" alt="기술, 그 상상을 뛰어넘다">
                                     </li>
                                 </ul>
                             </div>
@@ -484,37 +480,48 @@
                                 <li><a href="javascript:" title="슬라이드4" class="page-btn"></a></li>
                                 <li><a href="javascript:" title="재생/정지버튼" class="play-btn"></a></li>
                             </ul>
-                            <ul class="search-wrap"><!-- bg url -->
-                                <li><!-- 항공편검색 -->
-                                    <span>항공편 검색</span>
-                                </li>
-                                <li><!-- 출발,도착 -->
-                                    <ul>
-                                        <li>
-                                            <span>
-                                                <a href="javascript:" title="출발">
-                                                    <i class="icon-plane"></i>
-                                                    출발
-                                                </a>
-                                            </span>
-                                            <span><a href="javascript:" title="도착">
-                                                <i class="icon-plane"></i>
-                                                도착
-                                            </a>
-                                            </span>
-                                        </li>
-                                        <li>
-
-                                        </li>
-                                        <li>
-
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <span></span>
-                                </li><!-- 날씨,기온 -->
-                            </ul>
+                            <div class="search-wrap"><!-- bg url -->
+                                <ul class="claerfix">
+                                    <li class="search-title"><!-- display inline-block 항공편검색 -->
+                                        <a href="javascript:" title="항공편 검색">항공편 검색</a>
+                                    </li>
+                                    <li class="search-flight"><!-- 출발,도착 -->
+                                        <ul>
+                                            <li class="row1 claerfix">
+                                                <div>
+                                                    <a href="javascript:" title="출발" class="addClick">
+                                                        <i class="icon-plane"></i>
+                                                        출발
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <a href="javascript:" title="도착">
+                                                        <i class="icon-plane"></i>
+                                                        도착
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="row2">
+                                                <div>
+                                                    <input type="text" name="flight" id="flight" placeholder="항공편명/목적지를 입력하세요.">
+                                                    <a href="https://www.airport.kr/ap/ko/dep/depPasSchList.do"></a>
+                                                </div>
+                                            </li>
+                                            <li class="row3">
+                                                <span>※ 전체 운항시간표는 검색버튼을 클릭하면 보실 수 있습니다.</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="weather clearfix"><!-- 날씨,기온 -->
+                                        <div>
+                                            <span></span>
+                                        </div>
+                                        <div>
+                                            <span>00/00 ℃</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
