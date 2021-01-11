@@ -18,12 +18,11 @@
             var _closeBtn = _mobile.find(".closeBtn");
             var _mobileMenuBtn = _mobile.find(".mMenuBtn");
             var _wholeWrap = _mobile.find(".whole-wrap");
-            var _wholeWrapH = _wholeWrap.innerHeight();
-            var _moblieMenu = _mobile.find("#mobile-menu");
+            var _mMenuMain = $("#mobile-menu").find(".mMenu-main");
+            var _mMenuMainH = _mMenuMain.innerHeight();
+            var _mMenuheader = _mobile.find("#mobile-header");
             var _html = $("html");
-            var _content = _moblieMenu.find(".content");
-            var _contentH = _content.innerHeight();
-            var _contentRate = 1.222222222;
+            var _mMenuWrap = _mMenuMain.find(".wrap");
             var _window = $(window);
             var _popUp = $(".pop-up");
             var _windowH = _window.innerHeight();
@@ -70,15 +69,10 @@
             })
 
             //모바일 메뉴 높이 반응형 조정
-            function resizeFn(){
-                _contentH.css({ height : _windowH });
-                console.log( _contentH );
-                _content.css({ marginBottom : _contentH*_contentRate });
-            };
 
-            _window.resize(function(){
+            /* _window.resize(function(){
                 resizeFn();
-            })
+            }) */
         },
 
         popupFn : function(){
@@ -188,6 +182,10 @@
             var _window = $(window);
             var _section01 = $("#section01");
             var _winH = _window.innerHeight();
+            var cnt = 0;
+            var setId = null;
+            var _slide = $("#section01 .slide");
+            var 
 
             setTimeout(resizeFn, 10);
             function resizeFn(){
@@ -199,6 +197,8 @@
             _window.resize(function(){
                 resizeFn();
             })
+
+
         }
     }
 
