@@ -12,20 +12,21 @@
         },
         mobileFn :function(){
             
+            var _window = $(window);
+            var _windowH = _window.innerHeight();
+            
             var _mobile = $("#mobile");
+            var _wholeWrap = _mobile.find(".whole-wrap");
             var _mobileTitle = _mobile.find(".mobile-title");
             var _mobileSide = _mobile.find(".mobile-side");
             var _closeBtn = _mobile.find(".closeBtn");
             var _mobileMenuBtn = _mobile.find(".mMenuBtn");
-            var _wholeWrap = _mobile.find(".whole-wrap");
-            var _mMenuMain = $("#mobile-menu").find(".mMenu-main");
-            var _mMenuMainH = _mMenuMain.innerHeight();
-            var _mMenuheader = _mobile.find("#mobile-header");
-            var _html = $("html");
-            var _mMenuWrap = _mMenuMain.find(".wrap");
-            var _window = $(window);
+            var _moblieMenu = $("#mobile-menu");
+            var _mMenuMain = _moblieMenu.find(".mMenu-main");
+            var _mMenuMainH = _windowH - 98;
+            console.log(_mMenuMainH)
             var _popUp = $(".pop-up");
-            var _windowH = _window.innerHeight();
+            var _html = $("html");
             var t = 0;
             
             //아코디언메뉴 -> 오류수정확인! 토글변수사용시 조건문에 논리형으로 쓰는것!
@@ -70,31 +71,54 @@
 
             //모바일 메뉴 높이 반응형 조정
 
-            /* _window.resize(function(){
+            setTimeout(resizeFn,10);
+            function resizeFn(){
+                _mMenuMain.css({ height : _mMenuMainH });
+            }
+        
+            _window.resize(function(){
                 resizeFn();
-            }) */
+            })
         },
 
         popupFn : function(){
             
             var _window = $(window);
             var _winW = $(window).innerWidth();
-            var popUp = $(".pop-up");
-            var slideWrap = popUp.find(".slide-wrap");
+            var _popUp = $(".pop-up");
+            var _slideWrap = _popUp.find(".slide-wrap");
+            var _pageWrap = _popUp.find(".page-wrap");
 
-            var popCloseBtn = $(".pop-close-btn")
-            var closeBtn = popCloseBtn.find(".closeBtn");
+            var _popCloseBtn = $(".pop-close-btn")
+            var _closeBtn = _popCloseBtn.find(".closeBtn");
+            var _pageBtn = _pageWrap.find(".pageBtn");
             var _header = $("#header");
 
             var cnt = 0;
-            var leftBtn = popUp.find(".left-btn");
-            var rightBtn = popUp.find(".right-btn");
+            var setId = null;
+            var _slideCon = $(".pop-up .slide-container");
+            var _slideView = $(".pop-up .slide-view");
+            var _slide = $(".pop-up .slide");
+            var n = _slide.length;
+            var _slideW = _slide.innerWidth();
+            var _leftBtn = _slideCon.find(".leftBtn");
+            var _rightBtn = _slideCon.find(".rightBtn");
+            var _addPage = _pageWrap.find(".addPage");
+            var _playBtn = _pageWrap.find(".pagePlay");
+            var _stopBtn = _pageWrap.find(".pageStop");
+            var cnt2 = 0;
+            var setId2 = 0;
             
-           setTimeout(resizeFn,100);
-            // 창넓이 1200이하부터 팝업창 자동없어짐
+            setTimeout(resizeFn,100);
             function resizeFn(){
-                if( _winW <= 1200 )
-                popUp.addClass("addClose");
+
+                // 창넓이 1200이하부터 팝업창 자동없어짐
+                if( _winW <= 1200 ){
+                    _popUp.addClass("addClose");
+                    _slide.css({ maxWidth : _winW });
+                    _slideWrap.css({ width : _winW*n, marginLeft:-_winW });
+                    _slideView.css({ maxWidth : _winW});
+                }
             }
             
             _window.resize(function(){
@@ -103,44 +127,113 @@
 
 
             // 팝업창 닫기 버튼
-            closeBtn
-            .on("click", function(){
+            _closeBtn
+            .on("click", function(e){
+                e.preventDefault();
                 var _this = $(this);
-                _this.toggleClass("addClose");
-                popUp.toggleClass("addClose");
-                _header.toggleClass("addClose");
+                    _this.toggleClass("addClose");
+                    _popUp.toggleClass("addClose");
+                    _header.toggleClass("addClose");
             });
 
             //팝업창 슬라이드
+            function popMainSlideFn(){
+                _slideWrap.stop().animate({ left : -(_slideW*cnt) },600,function(){
+                    if(cnt>1){cnt=0};
+                    if(cnt<0){cnt=1};
+                    _slideWrap.stop().animate({ left : -(_slideW*cnt) },0);
+                });
+                if (_winW <= 1200){
+                    _slideW = _winW;
+                }
+                paginationFn();
+            };
+
             function popNextSlideFn(){
                 cnt++;
                 popMainSlideFn();
-                console.log(cnt);
             };
 
             function popPrevSlideFn(){
                 cnt--;
                 popMainSlideFn();
             };
-
-            setTimeout( popMainSlideFn,100 );
-            function popMainSlideFn(){
-
-                slideWrap.stop().animate({ left : (-1004*cnt/2)},600,function(){
-                    if(cnt>2){cnt=0};
-                    if(cnt<0){cnt=2};
-                    slideWrap.stop().animate({ left : (-1004*cnt/2) },0);
-                });
-            };
             
-            rightBtn.on("click",function(){
+            _rightBtn
+            .on("click", function(e){
+                e.preventDefault();
+                TimerFn();
+                if( !_slideWrap.is(":animated") ){
+                    popNextSlideFn();
+                }
+            
+            });
+            
+            _leftBtn
+            .on("click", function(e){
+                e.preventDefault();
+                TimerFn();
+                if( !_slideWrap.is(":animated") ){
+                    popPrevSlideFn();
+                }
+            });
+
+            _slideCon.swipe({
+                swipeRight : function(e){
+                    e.preventDefault();
+                    TimerFn();
+                    if( !_slideWrap.is(":animated") ){
+                        popPrevSlideFn();
+                    }
+                },
+                swipeLeft : function(e){
+                    e.preventDefault();
+                    TimerFn();
+                    if( !_slideWrap.is(":animated") ){
+                        popNextSlideFn();
+                    }
+                }
+            })
+
+            _stopBtn.on("click", function(e){
+                e.preventDefault();
+                TimerFn();
+            });
+
+            _playBtn.on("click", function(e){
+                e.preventDefault();
+                clearInterval(setId2);
+                autoTimerFn();
                 popNextSlideFn();
             });
-            
-            leftBtn.on("click",function(){
-                popPrevSlideFn();
-            });
 
+            setTimeout( autoTimerFn,100 );
+            function autoTimerFn(){
+                setId = setInterval(popNextSlideFn,8000)
+            }
+
+            function paginationFn(){
+                var z = cnt;
+                z > 1 ? z=0 : z;
+                z < 0 ? z=1 : z;
+                //console.log(z+1);
+                _pageBtn.eq(0).addClass("addPage");
+                _addPage.text(z+1);
+            }
+
+            function TimerFn(){
+                clearInterval(setId);
+                clearInterval(setId2);
+                cnt2 = 0;
+                setId2 = setInterval(function(){
+                    cnt2++;
+                    if(cnt2 > 7){
+                        clearInterval(setId2);
+                        autoTimerFn();
+                        popNextSlideFn();
+                    }
+                },1000)
+            }
         },
 
         headerFn : function(){
@@ -148,7 +241,7 @@
             var _language = $("#header .languageBtn");
             var _multi = $("#header .multi");
             var _nav = $("#header .mainBtn");
-            var _subBg = $("#header .sub-bg");
+            var _subBg = $("#header .subBg");
             var _navSubBg = $("#header .mainBtn, #header .sub-bg");
 
             //헤더 오른쪽 다국어 select 클릭이벤트
@@ -185,12 +278,12 @@
             var cnt = 0;
             var setId = null;
             var _slide = $("#section01 .slide");
-            var 
+            var _slideH2 = _slide.find("h2");
+            var _slideH3 = _slide.find("h3");
 
             setTimeout(resizeFn, 10);
             function resizeFn(){
                 _winH = _window.innerHeight();
-                
                 _section01.css({ height : _winH });
             }
 
@@ -198,7 +291,12 @@
                 resizeFn();
             })
 
-
+            setTimeout(titleMovingFn,800);
+            function titleMovingFn(){
+                _slideH2.stop().animate({ marginTop : -60, opacity : 1 },800,function(){
+                    _slideH3.stop().animate({ marginTop : -20, opacity : 1 },900)
+                })
+            }
         }
     }
 
