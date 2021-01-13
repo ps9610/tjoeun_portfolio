@@ -241,8 +241,10 @@
             var _language = $("#header .languageBtn");
             var _multi = $("#header .multi");
             var _nav = $("#header .mainBtn");
-            var _subBg = $("#header .subBg");
+            var _subBg = $("#header .sub-bg");
             var _navSubBg = $("#header .mainBtn, #header .sub-bg");
+            var _window = $(window);
+
 
             //헤더 오른쪽 다국어 select 클릭이벤트
             _language.on("click", function(){
@@ -262,12 +264,22 @@
                 _header.addClass("addSub");
             })
             
-            _navSubBg.on("mouseleave", function(){
+            _navSubBg
+            .on("mouseleave", function(){
                 _header.removeClass("addSub");
             })
             .on("focusout", function(){
                 _header.removeClass("addSub");
             });
+
+            _window.scroll(function(){
+                if( _window.scrollTop()>30 ){
+                    header.addClass("addHeader");
+                }
+                else{
+                    header.removeClass("addHeader");
+                }
+            })
         },
 
         section01Fn : function(){
