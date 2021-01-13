@@ -229,9 +229,11 @@
 #wrap #main #section01 .wrap .gap .content .slide-container .btn-wrap .next-btn {position:relative;float:right;margin-right:30px}
 #wrap #main #section01 .wrap .gap .content .slide-container .btn-wrap .next-btn > a {display:inline-block;width:30px;height:30px;border-top:5px solid rgba(0,0,0,.5);border-right:5px solid rgba(0,0,0,.5);transform:rotate(45deg);transition:all .5s;}
 #wrap #main #section01 .wrap .gap .content .slide-container .btn-wrap .next-btn:hover > a {border-color:rgba(0,0,0,1);}
+#wrap #main #section01 .wrap .gap .content .slide-container .btn-wrap .next-btn:focus > a {border-color:rgba(0,0,0,1);}
 #wrap #main #section01 .wrap .gap .content .slide-container .btn-wrap .prev-btn {position:relative;float:left;margin-left:30px}
 #wrap #main #section01 .wrap .gap .content .slide-container .btn-wrap .prev-btn > a {display:inline-block;width:30px;height:30px;border-bottom:5px solid rgba(0,0,0,.5);border-left:5px solid rgba(0,0,0,.5);transform:rotate(45deg);transition:all .5s;}
 #wrap #main #section01 .wrap .gap .content .slide-container .btn-wrap .prev-btn:hover > a {border-color:rgba(0,0,0,1);}
+#wrap #main #section01 .wrap .gap .content .slide-container .btn-wrap .prev-btn:focus > a {border-color:rgba(0,0,0,1);}
 
 #wrap #main #section01 .wrap .gap .content .slide-container .page-wrap {z-index:2;position:absolute;bottom:22%;left:47%;width:100%;}
 #wrap #main #section01 .wrap .gap .content .slide-container .page-wrap > li {float:left;width:10px;height:10px;margin:0 10px;}
@@ -239,8 +241,10 @@
 #wrap #main #section01 .wrap .gap .content .slide-container .page-wrap > li > a > i {display:block;width:100%;background:rgba(255,255,255,1);height:0;border-radius:50%;}
 #wrap #main #section01 .wrap .gap .content .slide-container .page-wrap > li > a.addEffect > i {background:rgba(255,255,255,1);height:100%;transition:all 7s;}
 #wrap #main #section01 .wrap .gap .content .slide-container .page-wrap > li > a.addEffect:hover > i {height:0;}
+#wrap #main #section01 .wrap .gap .content .slide-container .page-wrap > li > a.addEffect:focus > i {height:0;}
 #wrap #main #section01 .wrap .gap .content .slide-container .page-wrap > li .play-btn {width:16px;height:16px;border:0;border-radius:0;background:url(../img/spr_ico_main_visual_play.png) 0 0 no-repeat;background-size:40px 15px;}
 #wrap #main #section01 .wrap .gap .content .slide-container .page-wrap > li .play-btn:hover {background:url(../img/spr_ico_main_visual_play.png) 0 0 no-repeat;}
+#wrap #main #section01 .wrap .gap .content .slide-container .page-wrap > li .play-btn:focus {background:url(../img/spr_ico_main_visual_play.png) 0 0 no-repeat;}
 
 #wrap #main #section01 .wrap .gap .content .slide-container .search-wrap {z-index:2;position:absolute;bottom:0;left:0;width:100%;height:auto;background:url(../img/bg_main_flight_search.png) repeat 0 0 ;background-size:auto}
 #wrap #main #section01 .wrap .gap .content .slide-container .search-wrap > ul {position:relative;width:100%;max-width:935px;margin:0 auto;height:100%;padding-top:33px;box-sizing:border-box;}
