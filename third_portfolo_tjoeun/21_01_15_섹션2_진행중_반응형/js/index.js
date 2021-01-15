@@ -310,9 +310,11 @@
             var cnt = 0;
             var setId = null;
             var _slide = $("#section01 .slide");
-            var _slideH2 = _slide.find("h2");
-            var _slideH3 = _slide.find("h3");
+            var n = _slide.length-1;
+            var _nextBtn = _slide.find(".nextBtn")
+            var _prevBtn = _slide.find(".prevBtn")
 
+            //섹션1 높이 설정
             setTimeout(resizeFn, 10);
             function resizeFn(){
                 _winH = _window.innerHeight();
@@ -323,13 +325,75 @@
                 resizeFn();
             })
 
-            setTimeout(titleMovingFn,800);
-            function titleMovingFn(){
-                _slideH2.stop().animate({ marginTop : -60, opacity : 1 },800,function(){
-                    _slideH3.stop().animate({ marginTop : -20, opacity : 1 },900)
-                })
+            //슬라이드 문구 애니메이션 효과주기
+            function titleNextMovingFn(){
+                _slide.eq(cnt).find("h2").stop().animate({ marginTop : -60, opacity : 1 },800,function(){
+                    _slide.eq(cnt).find("h3").stop().animate({ marginTop : -20, opacity : 1 },900)
+                });
             }
+            function titlePrevMovingFn(){
+                _slide.eq(cnt).find("h2").stop().animate({ marginTop : -60, opacity : 1 },800,function(){
+                    _slide.eq(cnt).find("h3").stop().animate({ marginTop : -20, opacity : 1 },900)
+                });
+                console.log(cnt);
+            }
+            
+            //페이드 인 아웃 슬라이드
+
+            setTimeout(autoTimerFn,10);
+            function autoTimerFn(){
+                setId = setInterval(prevSlideCountFn,5000,titlePrevMovingFn);
+            }
+
+            function mainNextSlideFn(){ //눈에 보여야 하는게 z-index 3
+                _slide.css({zIndex:1});
+                _slide.eq(cnt==0? n:cnt-1).css({zIndex:2});
+                _slide.eq(cnt).css({zIndex:3}).stop().animate({ opacity:0 },0).stop().animate({ opacity:1 },800,function(){
+                    titleNextMovingFn();
+                });
+                
+            }
+            function mainPrevSildeFn(){ //현재 눈에 보이는게 없어져야함
+                _slide.css({zIndex:1}).stop().animate({ opacity:1 },0);
+                _slide.eq(cnt).css({zIndex:2});
+                _slide.eq(cnt==n? 0:cnt+1).css({zIndex:3}).stop().animate({ opacity:0 },800,function(){
+                    titlePrevMovingFn();
+                });
+
+            }
+
+            function nextSlideCountFn(){
+                cnt++;
+                if(cnt>n)cnt=0;
+                mainNextSlideFn();
+            };
+            function prevSlideCountFn(){
+                cnt--;
+                if(cnt<0)cnt=n;
+                mainPrevSildeFn();
+            };
+
+            _nextBtn.on({
+                click : function(e){
+                    e.preventDefault();
+                    if( !_slide.is(":animated") ){
+                        nextSlideCountFn();
+                    }
+                }
+            });
+
+            _prevBtn.on({
+                click : function(e){
+                    e.preventDefault();
+                    if( !_slide.is(":animated") ){
+                        prevSlideCountFn();
+                    }
+                }
+            });
+
+
         }
+
     }
 
     airport.init();
