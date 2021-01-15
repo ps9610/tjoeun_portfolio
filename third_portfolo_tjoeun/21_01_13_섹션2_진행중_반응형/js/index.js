@@ -109,7 +109,7 @@
             var cnt2 = 0;
             var setId2 = 0;
             
-            setTimeout(resizeFn,100);
+            setTimeout(resizeFn,800);
             function resizeFn(){
 
                 // 창넓이 1200이하부터 팝업창 자동없어짐
@@ -244,6 +244,8 @@
             var _subBg = $("#header .sub-bg");
             var _navSubBg = $("#header .mainBtn, #header .sub-bg");
             var _window = $(window);
+            var _wheelNav = $("#wheel-nav");
+            var _wheelNavBtn = $("#wheel-nav .mainBtn");
 
 
             //헤더 오른쪽 다국어 select 클릭이벤트
@@ -259,6 +261,16 @@
             .on("focusin", function(){
                 _header.addClass("addSub");
             });
+
+            _wheelNavBtn
+            .on("mouseenter", function(){
+                _header.addClass("addSub");
+                _subBg.css({ marginTop : 50 });
+            })
+            .on("focusin", function(){
+                _header.addClass("addSub");
+                _subBg.css({ marginTop : 0 });
+            });
             
             _subBg.on("mouseenter", function(){
                 _header.addClass("addSub");
@@ -272,12 +284,15 @@
                 _header.removeClass("addSub");
             });
 
+            //휠이벤트
             _window.scroll(function(){
                 if( _window.scrollTop()>30 ){
-                    header.addClass("addHeader");
+                    _header.addClass("addHeader");
+                    _wheelNav.addClass("addHeader");
                 }
                 else{
-                    header.removeClass("addHeader");
+                    _header.removeClass("addHeader");
+                    _wheelNav.removeClass("addHeader");
                 }
             })
         },
