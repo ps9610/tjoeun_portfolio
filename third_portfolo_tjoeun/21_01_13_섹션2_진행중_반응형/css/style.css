@@ -105,7 +105,6 @@
 #wrap .pop-up .pop-close-btn > a > span {display:inline-block;line-height:20px;width:10px;height:20px;background:url(../img/spr_ico_popupzone_.png) no-repeat 100% 30%;background-size:30px 6px;}
 #wrap .pop-up .pop-close-btn > a.addClose > span {background:url(../img/spr_ico_popupzone_.png) no-repeat 0 30%;background-size:30px 6px;}
 
-
 #wrap #header {z-index:3;top:0;position:fixed;width:100%;border-bottom:1px solid #ddd;margin-top:202px;transition:top .3s;}
 #wrap #header.addHeader {top:-111px;}
 #wrap #header.addClose {margin-top:0;}
