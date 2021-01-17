@@ -8,7 +8,7 @@
     <meta name="Viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0. maximum-scale=1.6, user-scalable=no">
     <meta name="Title" content="인천국제공항">
     <meta name="Publisher" content="프론트엔드 박소혜">
-    <meta name="Author-date" content="2021-01-15"> 
+    <meta name="Author-date" content="2021-01-17"> 
     <meta name="Author" content="프론트엔드 박소혜">
     <meta name="Copyright" content="인천국제공항">
     <meta name="Keywords" content="인천국제공항, 인천국제공항공사, 출발, 도착, 환승, 교통, 주차, 쇼핑, 공항지도, 항공편, 수속, 제1 여객터미널, 제2 여객터미널, 면세점">
@@ -392,6 +392,7 @@
                     </div>
                 </nav>
             </div>
+            </div>
         </div>
         <!-- sub-menu -->
         <div class="sub-bg">
@@ -518,13 +519,16 @@
                                 <div class="next-btn"><a href="javascript:" class="nextBtn"></a></div>
                                 <div class="prev-btn"><a href="javascript:" class="prevBtn"></a></div>
                             </div>
-                            <ul class="page-wrap">
-                                <li><a href="javascript:" title="슬라이드1" class="page-btn addEffect"><i class="blind">icon</i></a></li>
-                                <li><a href="javascript:" title="슬라이드2" class="page-btn"><i class="blind">icon</i></a></li>
-                                <li><a href="javascript:" title="슬라이드3" class="page-btn"><i class="blind">icon</i></a></li>
-                                <li><a href="javascript:" title="슬라이드4" class="page-btn"><i class="blind">icon</i></a></li>
-                                <li><a href="javascript:" title="재생/정지버튼" class="play-btn"></a></li>
-                            </ul>
+                            <div class="page-wrap">
+                                <ul class="clearfix">
+                                    <li><a href="javascript:" title="슬라이드1" class="pageBtn addEffect"><i class="blind">icon</i></a></li>
+                                    <li><a href="javascript:" title="슬라이드2" class="pageBtn"><i class="blind">icon</i></a></li>
+                                    <li><a href="javascript:" title="슬라이드3" class="pageBtn"><i class="blind">icon</i></a></li>
+                                    <li><a href="javascript:" title="슬라이드4" class="pageBtn"><i class="blind">icon</i></a></li>
+                                    <li><a href="javascript:" title="재생/정지버튼" class="playBtn"></a>
+                                    </li>
+                                </ul>
+                            </div>
                             <div class="search-wrap"><!-- bg url -->
                                 <ul class="clearfix">
                                     <li class="search-title"><!-- display inline-block 항공편검색 -->
@@ -580,144 +584,147 @@
                             <h2>공항 이용 가이드</h2>
                             <h3>Manual For Passenger</h3>
                         </div>
+                        <ul class="clearfix">
+                            <li> <!-- 1. 여행 전 확인 할 것 width 368(31.94444444%) height 540-->
+                                <div class="li-gap"> <!-- margin 0 8px 총 16px-->
+                                    <div class="header-wrap"> <!--width100% height200-->
+                                        <h2>여행 전 확인 할 것</h2>
+                                        <h3>공항 오기 전 확인할 정보를 알려드립니다.</h3>
+                                    </div>
+                                    <div class="content-wrap"><!-- width 100% height340-->
+                                        <ul><!--  padding15 -->
+                                            <li><!-- 1/3 항공편 -->
+                                            <!-- <div class="content-box">
+                                                
+                                            </div> -->
+                                            <div class="left-wrap"><!--width40%-->
+                                                <span>항공편</span>
+                                            </div>
+                                            <div class="right-wrap"><!--width60%-->
+                                                <ul>
+                                                    <li><a href="https://www.airport.kr/ap/ko/dep/depPasSchList.do" title="여객 출발 시간표">여객 출발 시간표</a></li>
+                                                    <li><a href="https://www.airport.kr/ap/ko/dep/pasRegSchList.do" title="여객 출발 정기 운항편">여객 출발 정기 운항편</a></li>
+                                                    <li><a href="https://www.airport.kr/ap/ko/arr/arrPasSchList.do" title="여객 도착 시간표">여객 도착 시간표</a></li>
+                                                    <li><a href="https://www.airport.kr/ap/ko/arr/pasRegSchList.do" title="여객 도착 정기 운항편">여객 도착 정기 운항편</a></li>
+                                                </ul>
+                                            </div>
+                                            </li>
+                                            <li> <!-- 2/3 여행준비 -->
+                                            <div class="left-wrap"><span>여행준비</span></div>
+                                            <div class="right-wrap">
+                                                <ul>
+                                                    <li><a href="https://www.airport.kr/ap/ko/svc/getFacilityMain.do?CTGRY_ID=11&UPPER_ID=111" title="환전">환전</a></li>
+                                                    <li><a href="https://www.airport.kr/ap/ko/svc/getFacilityMain.do?CTGRY_ID=11&UPPER_ID=112" title="보험">보험</a></li>
+                                                    <li><a href="https://www.airport.kr/ap/ko/svc/getFacilityMain.do?CTGRY_ID=16&UPPER_ID=161" title="택배">택배</a></li>
+                                                    <li><a href="https://www.airport.kr/ap/ko/svc/getFacilityMain.do?CTGRY_ID=12&UPPER_ID=127" title="로밍">로밍</a></li>
+                                                    <li><a href="" title="기내반입 금지물품">기내반입 금지물품</a></li>
+                                                    <li><a href="https://www.airport.kr/ap_cnt/ko/svc/covid19/medical/medical.do" title="코로나19 검사센터">코로나19 검사센터</a></li>
+                                                </ul>
+                                            </div>
+                                            </li>
+                                            <li> <!-- 3/3 교통수단-->
+                                            <div class="left-wrap"><span>교통수단</span></div>
+                                            <div class="right-wrap">
+                                                <ul>
+                                                    <li><a href="https://www.airport.kr/ap_cnt/ko/tpt/direction/direction.do" title="오시는길">오시는길</a></li>
+                                                    <li><a href="https://www.airport.kr/ap_cnt/ko/tpt/pblctpt/pblctpt.do" title="대중교통">대중교통</a></li>
+                                                    <li><a href="https://www.airport.kr/ap_cnt/ko/tpt/parinf/parinf.do" title="주차안내">주차안내</a></li>
+                                                </ul>
+                                            </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li> <!-- 2. -->
+                                <div class="li-gap">
+                                    <div class="header-wrap">
+                                        <h2>공항에서 할 것</h2>
+                                        <h3>인천공항 최적의 서비스를 안내해드립니다. </h3>
+                                    </div>
+                                    <div class="content-wrap">
+                                        <ul>
+                                            <li>
+                                                <div class="left-wrap"><span>빠른 수속 팁</span></div>
+                                                <div class="right-wrap">
+                                                    <ul>
+                                                        <li><a href="https://www.airport.kr/ap_lp/ko/dep/process/selfcheck/selfcheck.do" title="셀프체크인/셀프백드랍">셀프체크인/셀프백드랍</a></li>
+                                                        <li><a href="https://www.airport.kr/ap_lp/ko/dep/process/autimm/autimm.do" title="자동출국심사">자동출국심사</a></li>
+                                                        <li><a href="https://www.airport.kr/ap_lp/ko/dep/process/govcen/govcen.do" title="정부종합행정센터">정부종합행정센터</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="left-wrap"><span>공항즐기기</span></div>
+                                                <div class="right-wrap">
+                                                    <ul>
+                                                        <li><a href="https://www.airport.kr/ap/ko/shp/getDutyInfoMain.do" title="면세점">면세점</a></li>
+                                                        <li><a href="https://www.airport.kr/ap/ko/shp/getShopInfoMain.do" title="쇼핑">쇼핑</a></li>
+                                                        <li><a href="https://www.airport.kr/ap/ko/shp/getFoodInfoMain.do" title="식당">식당</a></li>
+                                                        <li><a href="https://www.airport.kr/ap/ko/svc/getFacilityMain.do?CTGRY_ID=14&UPPER_ID=142" title="라운지">라운지</a></li>
+                                                        <li><a href="https://www.airport.kr/ap/ko/svc/attractionMain.do?TAB_ID=51" title="문화공연">문화공연</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="left-wrap"><span>교통약자 서비스</span></div>
+                                                <div class="right-wrap">
+                                                    <ul>
+                                                        <li><a href="https://www.airport.kr/ap_lp/ko/svc/cusserv/servacc/servacc.do" title="임산부/유아/어린이 동반">임산부/유아/어린이 동반</a></li>
+                                                        <li><a href="https://www.airport.kr/ap_lp/ko/svc/cusserv/servtra/servtra.do" title="교통약자동반">교통약자동반</a></li>
+                                                        <li><a href="https://www.airport.kr/ap_lp/ko/svc/cusserv/servpet/servpet.do" title="애완동물동반">애완동물동반</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li-gap">
+                                    <div class="header-wrap">
+                                        <h2>환승할 때 할 것</h2>
+                                        <h3>환승객들을 위한 특별한 혜택을 안내해드립니다.</h3>
+                                    </div>
+                                    <div class="content-wrap">
+                                        <ul>
+                                            <li>
+                                                <div class="left-wrap"><span>환승안내</span></div>
+                                                <div class="right-wrap">
+                                                    <ul>
+                                                        <li><a href="https://www.airport.kr/ap_lp/ko/trn/intro/t1trnt1t1/t1trnt1t1.do" title="제1 여객터미널에서 환승하기">제1 여객터미널에서 환승하기</a></li>
+                                                        <li><a href="https://www.airport.kr/ap_lp/ko/trn/intro/boatrnboat1/boatrnboat1.do" title="탑승동에서 환승하기">탑승동에서 환승하기</a></li>
+                                                        <li><a href="https://www.airport.kr/ap_lp/ko/trn/intro/t2trnt2t1/t2trnt2t1.do" title="제2여객터미널에서 환승하기">제2여객터미널에서 환승하기</a></li>
+                                                        <li><a href="https://www.airport.kr/ap_lp/ko/trn/intro/inntrn/inntrn.do" title="내항기 환승">내항기 환승</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="left-wrap"><span>환승편의시설</span></div>
+                                                <div class="right-wrap">
+                                                    <ul>
+                                                        <li><a href="https://www.airport.kr/ap/ko/svc/getFacilityMain.do?CTGRY_ID=14&UPPER_ID=141" title="호텔">호텔</a></li>
+                                                        <li><a href="https://www.airport.kr/ap/ko/svc/getFacilityMain.do?CTGRY_ID=14&UPPER_ID=142" title="라운지">라운지</a></li>
+                                                        <li><a href="https://www.airport.kr/ap/ko/svc/getFacilityMain.do?CTGRY_ID=14&UPPER_ID=146" title="휴식(케어/마사지)">휴식(케어/마사지)</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="left-wrap"><span>환승투어</span></div>
+                                                <div class="right-wrap">
+                                                    <ul>
+                                                        <li><a href="https://www.airport.kr/ap_cnt/ko/trn/tour/trtour/trtour.do" title="환승투어 안내">환승투어 안내</a></li>
+                                                        <li><a href="https://www.airport.kr/ap_cnt/ko/trn/tour/trcose/trcose.do" title="코스소개">코스소개</a></li>
+                                                        <li><a href="https://www.airport.kr/ap/ko/trn/trnTourMain.do" title="환승투어 예약">환승투어 예약</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>    
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="clearfix">
-                        <li> <!-- 1. 여행 전 확인 할 것 width 368(31.94444444%) height 540-->
-                            <div class="li-gap"> <!-- margin 0 8px 총 16px-->
-                                <div class="title-wrap"> <!--width100% height200-->
-                                    <h2>여행 전 확인 할 것</h2>
-                                    <h3>공항 오기 전 확인할 정보를 알려드립니다.</h3>
-                                </div>
-                                <div class="content-wrap"><!-- width 100% height340-->
-                                    <ul><!-- display inline-block center padding15 -->
-                                        <li><!-- 1/3 항공편 -->
-                                        <div class="left-wrap"><!--width40%-->
-                                            <span>항공편</span>
-                                        </div>
-                                        <div class="right-wrap"><!--width60%-->
-                                            <ul>
-                                                <li><a href="https://www.airport.kr/ap/ko/dep/depPasSchList.do" title="여객 출발 시간표">여객 출발 시간표</a></li>
-                                                <li><a href="https://www.airport.kr/ap/ko/dep/pasRegSchList.do" title="여객 출발 정기 운항편">여객 출발 정기 운항편</a></li>
-                                                <li><a href="https://www.airport.kr/ap/ko/arr/arrPasSchList.do" title="여객 도착 시간표">여객 도착 시간표</a></li>
-                                                <li><a href="https://www.airport.kr/ap/ko/arr/pasRegSchList.do" title="여객 도착 정기 운항편">여객 도착 정기 운항편</a></li>
-                                            </ul>
-                                        </div>
-                                        </li>
-                                        <li> <!-- 2/3 여행준비 -->
-                                        <div class="left-wrap"><span>여행준비</span></div>
-                                        <div class="right-wrap">
-                                            <ul>
-                                                <li><a href="https://www.airport.kr/ap/ko/svc/getFacilityMain.do?CTGRY_ID=11&UPPER_ID=111" title="환전">환전</a></li>
-                                                <li><a href="https://www.airport.kr/ap/ko/svc/getFacilityMain.do?CTGRY_ID=11&UPPER_ID=112" title="보험">보험</a></li>
-                                                <li><a href="https://www.airport.kr/ap/ko/svc/getFacilityMain.do?CTGRY_ID=16&UPPER_ID=161" title="택배">택배</a></li>
-                                                <li><a href="https://www.airport.kr/ap/ko/svc/getFacilityMain.do?CTGRY_ID=12&UPPER_ID=127" title="로밍">로밍</a></li>
-                                                <li><a href="" title="기내반입 금지물품">기내반입 금지물품</a></li>
-                                                <li><a href="https://www.airport.kr/ap_cnt/ko/svc/covid19/medical/medical.do" title="코로나19 검사센터">코로나19 검사센터</a></li>
-                                            </ul>
-                                        </div>
-                                        </li>
-                                        <li> <!-- 3/3 교통수단-->
-                                        <div class="left-wrap"><span>교통수단</span></div>
-                                        <div class="right-wrap">
-                                            <ul>
-                                                <li><a href="https://www.airport.kr/ap_cnt/ko/tpt/direction/direction.do" title="오시는길">오시는길</a></li>
-                                                <li><a href="https://www.airport.kr/ap_cnt/ko/tpt/pblctpt/pblctpt.do" title="대중교통">대중교통</a></li>
-                                                <li><a href="https://www.airport.kr/ap_cnt/ko/tpt/parinf/parinf.do" title="주차안내">주차안내</a></li>
-                                            </ul>
-                                        </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li> <!-- 2. -->
-                            <div class="li-gap">
-                                <div class="title-wrap">
-                                    <h2>공항에서 할 것</h2>
-                                    <h3>인천공항 최적의 서비스를 안내해드립니다. </h3>
-                                </div>
-                                <div class="content-wrap">
-                                    <ul>
-                                        <li>
-                                            <div class="left-wrap"><span>빠른 수속 팁</span></div>
-                                            <div class="right-wrap">
-                                                <ul>
-                                                    <li><a href="https://www.airport.kr/ap_lp/ko/dep/process/selfcheck/selfcheck.do" title="셀프체크인/셀프백드랍">셀프체크인/셀프백드랍</a></li>
-                                                    <li><a href="https://www.airport.kr/ap_lp/ko/dep/process/autimm/autimm.do" title="자동출국심사">자동출국심사</a></li>
-                                                    <li><a href="https://www.airport.kr/ap_lp/ko/dep/process/govcen/govcen.do" title="정부종합행정센터">정부종합행정센터</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="left-wrap"><span>공항즐기기</span></div>
-                                            <div class="right-wrap">
-                                                <ul>
-                                                    <li><a href="https://www.airport.kr/ap/ko/shp/getDutyInfoMain.do" title="면세점">면세점</a></li>
-                                                    <li><a href="https://www.airport.kr/ap/ko/shp/getShopInfoMain.do" title="쇼핑">쇼핑</a></li>
-                                                    <li><a href="https://www.airport.kr/ap/ko/shp/getFoodInfoMain.do" title="식당">식당</a></li>
-                                                    <li><a href="https://www.airport.kr/ap/ko/svc/getFacilityMain.do?CTGRY_ID=14&UPPER_ID=142" title="라운지">라운지</a></li>
-                                                    <li><a href="https://www.airport.kr/ap/ko/svc/attractionMain.do?TAB_ID=51" title="문화공연">문화공연</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="left-wrap"><span>교통약자 서비스</span></div>
-                                            <div class="right-wrap">
-                                                <ul>
-                                                    <li><a href="https://www.airport.kr/ap_lp/ko/svc/cusserv/servacc/servacc.do" title="임산부/유아/어린이 동반">임산부/유아/어린이 동반</a></li>
-                                                    <li><a href="https://www.airport.kr/ap_lp/ko/svc/cusserv/servtra/servtra.do" title="교통약자동반">교통약자동반</a></li>
-                                                    <li><a href="https://www.airport.kr/ap_lp/ko/svc/cusserv/servpet/servpet.do" title="애완동물동반">애완동물동반</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="li-gap">
-                                <div class="title-wrap">
-                                    <h2>환승할 때 할 것</h2>
-                                    <h3>환승객들을 위한 특별한 혜택을 안내해드립니다.</h3>
-                                </div>
-                                <div class="content-wrap">
-                                    <ul>
-                                        <li>
-                                            <div class="left-wrap"><span>환승안내</span></div>
-                                            <div class="right-wrap">
-                                                <ul>
-                                                    <li><a href="https://www.airport.kr/ap_lp/ko/trn/intro/t1trnt1t1/t1trnt1t1.do" title="제1 여객터미널에서 환승하기">제1 여객터미널에서 환승하기</a></li>
-                                                    <li><a href="https://www.airport.kr/ap_lp/ko/trn/intro/boatrnboat1/boatrnboat1.do" title="탑승동에서 환승하기">탑승동에서 환승하기</a></li>
-                                                    <li><a href="https://www.airport.kr/ap_lp/ko/trn/intro/t2trnt2t1/t2trnt2t1.do" title="제2여객터미널에서 환승하기">제2여객터미널에서 환승하기</a></li>
-                                                    <li><a href="https://www.airport.kr/ap_lp/ko/trn/intro/inntrn/inntrn.do" title="내항기 환승">내항기 환승</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="left-wrap"><span>환승편의시설</span></div>
-                                            <div class="right-wrap">
-                                                <ul>
-                                                    <li><a href="https://www.airport.kr/ap/ko/svc/getFacilityMain.do?CTGRY_ID=14&UPPER_ID=141" title="호텔">호텔</a></li>
-                                                    <li><a href="https://www.airport.kr/ap/ko/svc/getFacilityMain.do?CTGRY_ID=14&UPPER_ID=142" title="라운지">라운지</a></li>
-                                                    <li><a href="https://www.airport.kr/ap/ko/svc/getFacilityMain.do?CTGRY_ID=14&UPPER_ID=146" title="휴식(케어/마사지)">휴식(케어/마사지)</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="left-wrap"><span>환승투어</span></div>
-                                            <div class="right-wrap">
-                                                <ul>
-                                                    <li><a href="https://www.airport.kr/ap_cnt/ko/trn/tour/trtour/trtour.do" title="환승투어 안내">환승투어 안내</a></li>
-                                                    <li><a href="https://www.airport.kr/ap_cnt/ko/trn/tour/trcose/trcose.do" title="코스소개">코스소개</a></li>
-                                                    <li><a href="https://www.airport.kr/ap/ko/trn/trnTourMain.do" title="환승투어 예약">환승투어 예약</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>    
-                        </li>
-                    </ul>
                 </div>
             </div>
         </section>

@@ -20,11 +20,10 @@
             var _mobileTitle = _mobile.find(".mobile-title");
             var _mobileSide = _mobile.find(".mobile-side");
             var _closeBtn = _mobile.find(".closeBtn");
+            var _moblieMenu = $("#mobile #mobile-menu");
             var _mobileMenuBtn = _mobile.find(".mMenuBtn");
-            var _moblieMenu = $("#mobile-menu");
             var _mMenuMain = _moblieMenu.find(".mMenu-main");
             var _mMenuMainH = _windowH - 98;
-            console.log(_mMenuMainH)
             var _popUp = $(".pop-up");
             var _html = $("html");
             var t = 0;
@@ -51,7 +50,8 @@
             })
 
             //모바일 메뉴(햄버거버튼) 클릭이벤트
-            _mobileMenuBtn.on("click", function(){
+            _mobileMenuBtn.on("click", function(e){
+                e.preventDefault();
                 _wholeWrap.stop().animate({ left:0 },300);
                 _mobile.addClass("addMoMenu");
                 _moblieMenu.css({zIndex : 3});
@@ -61,15 +61,20 @@
             })
 
             //모바일 메뉴 닫기버튼 클릭이벤트
-            _closeBtn.on("click", function(){
+            _closeBtn.on("click", function(e){
+                e.preventDefault();
                 _wholeWrap.stop().animate({ left:-1000 },300);
                 _mobile.removeClass("addMoMenu");
                 _moblieMenu.css({zIndex : 1});
                 _popUp.css({zIndex : 4});
-                _html.addClass("removeScroll");
+                _html.removeClass("addScroll");
             })
 
             //모바일 메뉴 높이 반응형 조정
+
+            _window.scroll(function(){
+                _moblieMenu.css({ top : $(window).scrollTop() });   
+            })
 
             setTimeout(resizeFn,10);
             function resizeFn(){
@@ -249,8 +254,10 @@
             var _subBg = $("#header .sub-bg");
             var _navSubBg = $("#header .mainBtn, #header .sub-bg");
             var _window = $(window);
+            var _windowW = $(window).innerWidth();
             var _wheelNav = $("#wheel-nav");
             var _wheelNavBtn = $("#wheel-nav .mainBtn");
+
 
 
             //헤더 오른쪽 다국어 select 클릭이벤트
@@ -311,8 +318,12 @@
             var setId = null;
             var _slide = $("#section01 .slide");
             var n = _slide.length-1;
-            var _nextBtn = _slide.find(".nextBtn")
-            var _prevBtn = _slide.find(".prevBtn")
+            var _nextBtn = _slide.find(".nextBtn");
+            var _prevBtn = _slide.find(".prevBtn");
+            var _playBtn = _section01.find(".playBtn");
+            var cnt2 = 0;
+            var setId2 = 0;
+            var _pageBtn = _section01.find(".pageBtn");
 
             //섹션1 높이 설정
             setTimeout(resizeFn, 10);
@@ -335,14 +346,14 @@
                 _slide.eq(cnt).find("h2").stop().animate({ marginTop : -60, opacity : 1 },800,function(){
                     _slide.eq(cnt).find("h3").stop().animate({ marginTop : -20, opacity : 1 },900)
                 });
-                console.log(cnt);
+                //console.log(cnt);
             }
             
             //페이드 인 아웃 슬라이드
 
             setTimeout(autoTimerFn,10);
             function autoTimerFn(){
-                setId = setInterval(prevSlideCountFn,5000,titlePrevMovingFn);
+                setId = setInterval(nextSlideCountFn,9000);
             }
 
             function mainNextSlideFn(){ //눈에 보여야 하는게 z-index 3
@@ -351,7 +362,7 @@
                 _slide.eq(cnt).css({zIndex:3}).stop().animate({ opacity:0 },0).stop().animate({ opacity:1 },800,function(){
                     titleNextMovingFn();
                 });
-                
+                paginationFn();
             }
             function mainPrevSildeFn(){ //현재 눈에 보이는게 없어져야함
                 _slide.css({zIndex:1}).stop().animate({ opacity:1 },0);
@@ -359,7 +370,7 @@
                 _slide.eq(cnt==n? 0:cnt+1).css({zIndex:3}).stop().animate({ opacity:0 },800,function(){
                     titlePrevMovingFn();
                 });
-
+                paginationFn();
             }
 
             function nextSlideCountFn(){
@@ -378,6 +389,7 @@
                     e.preventDefault();
                     if( !_slide.is(":animated") ){
                         nextSlideCountFn();
+                        timerFn();
                     }
                 }
             });
@@ -387,11 +399,62 @@
                     e.preventDefault();
                     if( !_slide.is(":animated") ){
                         prevSlideCountFn();
+                        timerFn();
                     }
                 }
             });
 
+            //페이지네이션
+            function paginationFn(){
+                var z = cnt;
+                z>n? z=0 : cnt;
+                _pageBtn.removeClass("addEffect");
+                _pageBtn.eq(z).addClass("addEffect");
+            }
 
+            _pageBtn.each(function(i){
+                var _this = $(this);
+                _this.on({
+                    click : function(e){
+                        e.preventDefault();
+                        timerFn();
+                        var _temporary = cnt;
+                        cnt = i;
+                        //console.log("tem",_temporary);
+                        //console.log("cnt",cnt);
+                        //console.log("i",i);
+                        if( !_slide.is(":animated") ){
+                            if(_temporary<i)mainNextSlideFn();
+                            if(_temporary>i)mainPrevSildeFn();
+                        }
+                    }
+                })
+            })
+
+            function timerFn(){
+                clearInterval(setId);
+                clearInterval(setId2);
+                cnt2 = 0;
+                setId2 = setInterval(function(){
+                    cnt2++;
+                    console.log(cnt2);
+                    if(cnt2>7){
+                        clearInterval(setId2);
+                        autoTimerFn();
+                        nextSlideCountFn();
+                    }
+                },1000)
+            }
+
+            _playBtn.on({
+                click : function(){
+                    clearInterval(setId);
+                    var _this = $(this);
+                    _this.addClass("addPlay");
+                    timerFn();
+                }
+            })
+            
         }
 
     }
