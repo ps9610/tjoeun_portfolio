@@ -9,6 +9,7 @@
 
     #wrap #header {display:none;}
     #wrap #mobile {display:block;}
+    
     #wrap .pop-up {margin-top:60px;}
     #wrap .pop-up.addClose {margin-top:-209px;}
 

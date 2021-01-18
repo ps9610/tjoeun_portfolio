@@ -21,6 +21,7 @@
             var _mobileSide = _mobile.find(".mobile-side");
             var _closeBtn = _mobile.find(".closeBtn");
             var _moblieMenu = $("#mobile #mobile-menu");
+            var _moblieMenuH = $("#mobile #mobile-menu").innerHeight();
             var _mobileMenuBtn = _mobile.find(".mMenuBtn");
             var _mMenuMain = _moblieMenu.find(".mMenu-main");
             var _mMenuMainH = _windowH - 98;
@@ -54,7 +55,7 @@
                 e.preventDefault();
                 _wholeWrap.stop().animate({ left:0 },300);
                 _mobile.addClass("addMoMenu");
-                _moblieMenu.css({zIndex : 3});
+                _moblieMenu.css({zIndex : 3, height : _windowH});
                 _popUp.css({zIndex : 2});
 
                 _html.addClass("addScroll");
@@ -65,7 +66,7 @@
                 e.preventDefault();
                 _wholeWrap.stop().animate({ left:-1000 },300);
                 _mobile.removeClass("addMoMenu");
-                _moblieMenu.css({zIndex : 1});
+                _moblieMenu.css({zIndex : 1, height : 0});
                 _popUp.css({zIndex : 4});
                 _html.removeClass("addScroll");
             })
@@ -106,8 +107,8 @@
             var _slide = $(".pop-up .slide");
             var n = _slide.length;
             var _slideW = _slide.innerWidth();
-            var _leftBtn = _slideCon.find(".leftBtn");
-            var _rightBtn = _slideCon.find(".rightBtn");
+            var _leftBtn = _popUp.find(".leftBtn");
+            var _rightBtn = _popUp.find(".rightBtn");
             var _addPage = _pageWrap.find(".addPage");
             var _playBtn = _pageWrap.find(".pagePlay");
             var _stopBtn = _pageWrap.find(".pageStop");
@@ -257,6 +258,9 @@
             var _windowW = $(window).innerWidth();
             var _wheelNav = $("#wheel-nav");
             var _wheelNavBtn = $("#wheel-nav .mainBtn");
+            var  _section = $(".section");
+            var n = _section.length;
+            var _delta = null;
 
 
 
@@ -307,6 +311,27 @@
                     _wheelNav.removeClass("addHeader");
                 }
             })
+
+            //휠 마우스 이벤트
+            _section.each(function(i){
+                var _this = $(this);
+                _this.on("mousewheel DOMMouseScroll", function(e){
+                    e.preventDefault();
+                    if(e.detail){
+                        _delta = e.detail * (-40);
+                    }
+                    else{
+                        _delta = e.originalEvent.wheelDelta;
+                    }
+                    if(_delta < 0){
+                        if(i<n-1){}
+                    }
+                    else{
+
+                    }
+                })
+            })
+            
         },
 
         section01Fn : function(){
@@ -318,12 +343,13 @@
             var setId = null;
             var _slide = $("#section01 .slide");
             var n = _slide.length-1;
-            var _nextBtn = _slide.find(".nextBtn");
-            var _prevBtn = _slide.find(".prevBtn");
+            var _nextBtn = _section01.find(".nextBtn");
+            var _prevBtn = _section01.find(".prevBtn");
             var _playBtn = _section01.find(".playBtn");
             var cnt2 = 0;
             var setId2 = 0;
             var _pageBtn = _section01.find(".pageBtn");
+            var url = null;
 
             //섹션1 높이 설정
             setTimeout(resizeFn, 10);
@@ -454,20 +480,6 @@
                     timerFn();
                 }
             })
-            
-        },
-        section02Fn : function(){
-            var _window = $(window);
-            var _winH = _window.innerHeight();
-            var _section2 = $("#section02");
-/* 
-            function resizeFn(){
-                _section2.css({ height : _winH });
-            }
-
-            _window.resize(function(){
-                resizeFn();
-            }) */
         }
     }
 
