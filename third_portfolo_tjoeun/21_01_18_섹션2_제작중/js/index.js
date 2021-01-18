@@ -6,7 +6,7 @@
                 that.popupFn();
                 that.headerFn();
                 that.section01Fn();
-                //that.section02Fn();
+                that.section02Fn();
                 //that.section03Fn();
                 //that.footerFn();
         },
@@ -455,8 +455,20 @@
                 }
             })
             
-        }
+        },
+        section02Fn : function(){
+            var _window = $(window);
+            var _winH = _window.innerHeight();
+            var _section2 = $("#section02");
+/* 
+            function resizeFn(){
+                _section2.css({ height : _winH });
+            }
 
+            _window.resize(function(){
+                resizeFn();
+            }) */
+        }
     }
 
     airport.init();
