@@ -1,4 +1,4 @@
-;(function($,window,document,undefined){
+    ;(function($,window,document,undefined){
     var airport = {
         init : function(){
             var that = this;
@@ -6,7 +6,7 @@
                 that.popupFn();
                 that.headerFn();
                 that.section01Fn();
-                //that.section02Fn();
+                that.section02Fn();
                 that.section03Fn();
                 //that.footerFn();
         },
@@ -21,10 +21,11 @@
             var _mobileSide = _mobile.find(".mobile-side");
             var _closeBtn = _mobile.find(".closeBtn");
             var _moblieMenu = $("#mobile #mobile-menu");
-            var _moblieMenuH = $("#mobile #mobile-menu").innerHeight();
             var _mobileMenuBtn = _mobile.find(".mMenuBtn");
             var _mMenuMain = _moblieMenu.find(".mMenu-main");
-            var _mMenuMainH = _windowH - 98;
+            var _mMenuHeader = _moblieMenu.find(".mMenu-header");
+            var _mMenuHeaderH = _mMenuHeader.innerHeight();
+            var _mMenuMainH = _windowH - _mMenuHeaderH;
             var _popUp = $(".pop-up");
             var _html = $("html");
             var t = 0;
@@ -55,7 +56,9 @@
                 e.preventDefault();
                 _wholeWrap.stop().animate({ left:0 },300);
                 _mobile.addClass("addMoMenu");
-                _moblieMenu.css({zIndex : 3, height : _windowH});
+                /* _moblieMenu.css({zIndex : 3, height : _windowH}); */
+                _moblieMenu.css({zIndex : 3, height : _mMenuMainH});
+                console.log(_mMenuMainH);
                 _popUp.css({zIndex : 2});
 
                 _html.addClass("addScroll");
@@ -71,10 +74,11 @@
                 _html.removeClass("addScroll");
             })
 
-            //모바일 메뉴 높이 반응형 조정
+            //⭐모바일 메뉴 높이 반응형 조정
 
             _window.scroll(function(){
-                _moblieMenu.css({ top : $(window).scrollTop() });   
+                _moblieMenu.css({ top : _window.scrollTop() });   
+                //console.log(_window.scrollTop())
             })
 
             setTimeout(resizeFn,10);
@@ -114,16 +118,36 @@
             var _stopBtn = _pageWrap.find(".pageStop");
             var cnt2 = 0;
             var setId2 = 0;
-        
-            setTimeout(resizeFn,800);
-            function resizeFn(){
+            
+            //⭐섹션1에서만 팝업창 실행
+/*              if( !_window.offset().top == 0 ){
+                _popUp.stop().hide(0);
+            }
+            else{
+                _popUp.stop().show(0);
+            }
+            console.log( _window.offset().top )  */
 
+            setTimeout(resizeFn,10);
+            function resizeFn(){
                 // 창넓이 1200이하부터 팝업창 자동없어짐
-                if( _winW <= 1200 ){
+                if( _winW < 1201 ){
+                    _popUp.addClass("addClose");
+                    _popUp.css({top : -17});
+                    _slide.css({ maxWidth : _winW });
+                    _slideWrap.css({ width : _winW*n, marginLeft:-_winW });
+                    _slideView.css({ maxWidth : _winW});
+                }
+                else if( _winW < 801 ){
                     _popUp.addClass("addClose");
                     _slide.css({ maxWidth : _winW });
                     _slideWrap.css({ width : _winW*n, marginLeft:-_winW });
                     _slideView.css({ maxWidth : _winW});
+                    _popUp.css({top : -242});
+                }
+                else{
+                    _popUp.removeClass("addClose");
+                    _popUp.css({top : 0});
                 }
             }
             
@@ -255,13 +279,15 @@
             var _subBg = $("#header .sub-bg");
             var _navSubBg = $("#header .mainBtn, #header .sub-bg");
             var _window = $(window);
-            var _windowW = $(window).innerWidth();
             var _wheelNav = $("#wheel-nav");
             var _wheelNavBtn = $("#wheel-nav .mainBtn");
-            var  _section = $(".section");
-            var n = _section.length;
+            var _wheelEvent = $(".wheel_event")
+            var n = _wheelEvent.length;
             var _delta = null;
-
+            var _htmlBody = $("html, body");
+            var _footer = $("#footer");
+            var _popUp = $(".pop-up");
+            var _section03 = $("#section03");
 
 
             //헤더 오른쪽 다국어 select 클릭이벤트
@@ -313,10 +339,22 @@
             })
 
             //휠 마우스 이벤트
-            _section.each(function(i){
+            _wheelEvent.each(function(i){
                 var _this = $(this);
                 _this.on("mousewheel DOMMouseScroll", function(e){
                     e.preventDefault();
+                    
+                    //섹션2부터 팝업창 없어짐
+                    _window.scroll(function(){
+                        if(_delta < 0){
+                            _popUp.css({top:-300});
+                        }
+                        else{
+                            _popUp.css({top:0});
+                        }
+                    })
+
+                    //섹션별 휠마우스 이벤트 if. else 쓸 때 비어있는 줄 없이 쓰기!!!
                     if(e.detail){
                         _delta = e.detail * (-40);
                     }
@@ -324,11 +362,26 @@
                         _delta = e.originalEvent.wheelDelta;
                     }
                     if(_delta < 0){
-                        if(i<n-1){}
+                        if(i<n-1){
+                            if(i==n-2){
+                                _htmlBody.stop().animate({ scrollTop : _footer.offset().top },1000,"easeInOutBack")
+                            }
+                            else {
+                                _htmlBody.stop().animate({ scrollTop : _this.next().offset().top },1000,"easeInOutBack")
+                            }
+                            _header.addClass("addHeader");
+                            _wheelNav.addClass("addHeader");
+                        }
                     }
                     else{
-
+                        if(i==n-1){
+                            _htmlBody.stop().animate({ scrollTop : _section03.offset().top },1000,"easeInOutBack")
+                        }
+                        else {
+                            _htmlBody.stop().animate({ scrollTop : _this.prev().offset().top },1000,"easeInOutBack")
+                        }
                     }
+                    console.log(i);
                 })
             })
             
@@ -479,6 +532,19 @@
                     _this.addClass("addPlay");
                     timerFn();
                 }
+            })
+        },
+        section02Fn : function(){
+            var _win = $(window);
+            var _winH = _win.innerHeight();
+            var _section02 = $("#section02");
+            
+            function resizeFn(){
+                _section02.css({ height : _winH });
+            }
+
+            _win.resize(function(){
+                resizeFn();
             })
         },
         section03Fn : function(){

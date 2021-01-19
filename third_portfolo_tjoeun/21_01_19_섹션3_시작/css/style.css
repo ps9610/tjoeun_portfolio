@@ -75,7 +75,7 @@
 #wrap #mobile #mobile-menu .whole-wrap .mMenu-main .wrap .gap .footer-row2 > ul .corp > a > span {display:block;text-align:center;font-size:0.7617rem;color:#ccc;font-weight:600;}
 
 /* pop-up */
-#wrap .pop-up {z-index:4;position:fixed;width:100%;background:#272936;margin-top:0;transition:all .5s;}
+#wrap .pop-up {z-index:4;position:fixed;width:100%;background:#272936;margin-top:0;transition:all 0.5s;top:0;}
 #wrap .pop-up.addClose {margin-top:-202px;}
 #wrap .pop-up .slide-container {z-index:1;position:relative;width:100%;}
 #wrap .pop-up .slide-container .slide-view {z-index:1;position:relative;width:100%;max-width:1070px;margin:0 auto;overflow:hidden;}
@@ -105,8 +105,8 @@
 #wrap .pop-up .pop-close-btn > a > span {display:inline-block;line-height:20px;width:10px;height:20px;background:url(../img/spr_ico_popupzone_.png) no-repeat 100% 30%;background-size:30px 6px;}
 #wrap .pop-up .pop-close-btn > a.addClose > span {background:url(../img/spr_ico_popupzone_.png) no-repeat 0 30%;background-size:30px 6px;}
 
-#wrap #header {z-index:3;top:0;position:fixed;width:100%;border-bottom:1px solid #ddd;margin-top:202px;transition:top .3s;}
-#wrap #header.addHeader {top:-111px;}
+#wrap #header {display:block;z-index:3;top:0;position:fixed;width:100%;border-bottom:1px solid #ddd;margin-top:202px;transition:top .3s;}
+#wrap #header.addHeader {display:none;}
 #wrap #header.addClose {margin-top:0;}
 #wrap #header .wrap {width:100%;}
 #wrap #header .wrap .gap {padding:15px 10px 0 10px;box-sizing:border-box;background:rgba(0,0,0,.3);transition:background .4s;}
@@ -306,7 +306,7 @@
 #wrap #main #section01 .wrap .gap .content .slide-container .search-wrap > ul > li.weather > div:first-child > span {width:56px;height:56px;margin:-10px 20px 0 20px;background:url(../img/icon01.png) no-repeat 50% 50%;}
 #wrap #main #section01 .wrap .gap .content .slide-container .search-wrap > ul > li.weather > div:last-child > span {margin-top:10px;display:inline-block;color:#fff;line-height:15px;font-size:15px;}
 
-#wrap #main #section02 {width:100%;height:937px;display:table;background:url(../img/bg_main_section_01.jpg);}
+#wrap #main #section02 {width:100%;height:937px;display:table;background:url(../img/bg_main_section_01.jpg) no-repeat 50% 50%;background-size:cover;padding:100px 0;}
 #wrap #main #section02 .wrap {width:100%;display:table-cell;vertical-align:middle;}
 #wrap #main #section02 .wrap .gap {width:100%;max-width:1152px;margin:0 auto;}
 #wrap #main #section02 .wrap .gap .container {width:100%;height:auto;}
@@ -341,10 +341,10 @@
 #wrap #main #section02 .wrap .gap .container > ul > li .li-gap .content-wrap > ul > li .right-wrap > ul > li > a:hover {text-decoration:underline;color:#439096;}
 #wrap #main #section02 .wrap .gap .container > ul > li .li-gap .content-wrap > ul > li .right-wrap > ul > li > a:focus {text-decoration:underline;color:#439096;}
 
-#wrap #main #section03 {width:100%;height:937px;display:table;background:url(../img/bg_main_section_02.jpg);}
+#wrap #main #section03 {width:100%;height:937px;display:table;background:url(../img/bg_main_section_02.jpg) no-repeat 50% 50%;background-size:cover;padding:100px 0 0 0;}
 #wrap #main #section03 .wrap {width:100%;display:table-cell;vertical-align:middle;}
 #wrap #main #section03 .wrap .gap {width:100%;}
-#wrap #main #section03 .wrap .gap .container {width:100%;max-width:1004px;margin:0 auto;;}
+#wrap #main #section03 .wrap .gap .container {width:100%;max-width:1004px;margin:0 auto;}
 #wrap #main #section03 .wrap .gap .container .title-wrap {width:100%;margin-bottom:72px;text-align:center;}
 #wrap #main #section03 .wrap .gap .container .title-wrap > h2 {color:#fff;font-size:37.5px;line-height:100%;}
 #wrap #main #section03 .wrap .gap .container > ul {width:100%;}
@@ -377,4 +377,5 @@
 #wrap #main #section03 .wrap .gap .container > ul > li:last-child .li-gap .content-wrap .content > ul > li:nth-child(4) > a .content-icon {background:url(../img/spr_ico_main_guide.png) no-repeat 66.5% 30%;background-size:270px 328px;}
 #wrap #main #section03 .wrap .gap .container > ul > li:last-child .li-gap .content-wrap .content > ul > li:nth-child(5) > a .content-icon {background:url(../img/spr_ico_main_guide.png) no-repeat 66.5% 59.6%;background-size:270px 328px;}
 #wrap #main #section03 .wrap .gap .container > ul > li:last-child .li-gap .content-wrap .content > ul > li:nth-child(6) > a .content-icon {background:url(../img/spr_ico_main_guide.png) no-repeat 100% 29.8%;background-size:270px 328px;}
-#wrap #footer {z-index:1;position:relative;}
+
+#wrap #footer {z-index:1;position:relative;width:100%;height:500px;background:#bdd;}
