@@ -6,8 +6,8 @@
                 that.popupFn();
                 that.headerFn();
                 that.section01Fn();
-                that.section02Fn();
-                //that.section03Fn();
+                //that.section02Fn();
+                that.section03Fn();
                 //that.footerFn();
         },
         mobileFn :function(){
@@ -479,6 +479,19 @@
                     _this.addClass("addPlay");
                     timerFn();
                 }
+            })
+        },
+        section03Fn : function(){
+            var _win = $(window);
+            var _winH = _win.innerHeight();
+            var _section03 = $("#section03");
+            
+            function resizeFn(){
+                _section03.css({ height : _winH });
+            }
+
+            _win.resize(function(){
+                resizeFn();
             })
         }
     }
