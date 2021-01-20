@@ -18,7 +18,9 @@
             var _closeBtn = _mobile.find(".closeBtn");
             var _mobileMenuBtn = _mobile.find(".mMenuBtn");
             var _wholeWrap = _mobile.find(".whole-wrap");
-            var _wholeWrapH = _wholeWrap.innerHeight();
+            var _mMenuMain = $(".mMenu-main");
+            var _mMenuMainCon = $(".mMenu-main").find("content");
+            var _mMenuMainW = _mMenuMain.innerWidth();
             var _moblieMenu = _mobile.find("#mobile-menu");
             var _html = $("html");
             var _content = _moblieMenu.find(".content");
@@ -71,10 +73,9 @@
 
             //모바일 메뉴 높이 반응형 조정
             function resizeFn(){
-                _contentH.css({ height : _windowH });
-                console.log( _contentH );
-                _content.css({ marginBottom : _contentH*_contentRate });
-            };
+                _mMenuMainCon.css({ marginBottom : _mMenuMainW * 0.823 });
+                //console.log( _contentH );
+            } 
 
             _window.resize(function(){
                 resizeFn();
@@ -188,13 +189,96 @@
             var _window = $(window);
             var _section01 = $("#section01");
             var _winH = _window.innerHeight();
+            var cnt = 0;
+            var setId = null;
+            var _slide = $("#section01 .slide");
+            var _nextBtn = $("#section01 .nextBtn");
+            var _prevBtn = $("#section01 .prevBtn");
+            var n = _slide.length-1;
+            //console.log(n);
+            var _pageBtn = $("#section01 .pageBtn");
+            var imsi = null;
 
             setTimeout(resizeFn, 10);
             function resizeFn(){
                 _winH = _window.innerHeight();
-                
                 _section01.css({ height : _winH });
             }
+            
+            /* function autoTimerfn(){
+                setId = setInterval(nextSlideFn,10);
+            } */
+
+            function mainNextSlideFn(){ //현재 cnt가 나타난다 | opacity 0에서 1로
+                _slide.css({ zIndex:1 })//초기화
+                _slide.eq(cnt==0?n:cnt-1).css({ zIndex:2 });
+                _slide.eq(cnt).css({ zIndex:3 }).stop().animate({ opacity : 0 },0).stop().animate({ opacity : 1 },800);
+                pageBtnFn();
+            }
+            function mainPrevSlideFn(){ //현재 cnt가 사라진다 | opacity 1에서 0으로
+                _slide.css({ zIndex:1 }).stop().animate({ opacity : 1 },0); //초기화
+                _slide.eq(cnt).css({ zIndex:2 });
+                _slide.eq(cnt==n?0:cnt+1).css({ zIndex:3 }).stop().animate({ opacity : 0 },800);
+                pageBtnFn();
+            }
+            //3 0 0 1 | 2 1 1 0
+
+            function nextSlideFn(){
+                cnt++;
+                if(cnt>n) cnt=0;
+                console.log(cnt);
+                mainNextSlideFn();
+            }
+
+            function prevSlideFn(){
+                cnt--;
+                if(cnt<0) cnt=n;
+                console.log(cnt);
+                mainPrevSlideFn();
+            }
+
+            function pageBtnFn(z){
+                _pageBtn.removeClass("addHover");
+                _pageBtn.eq(z).addClass("addHover");
+                //console.log(z);
+            }
+
+            _pageBtn.each(function(i){
+                var _this = $(this);
+                _this.on("click",function(e){
+                    e.preventDefault();
+                    //console.log("전:i", i);
+                    //console.log("전:cnt", cnt);
+                    // 클릭한 i 값은 0 1 2 3으로 계속 변화하지만 현재 슬라이드 cnt의 값은 0으로 변하지 않음
+                        //근데 현재 슬라이드의 값이 클릭한 i의 값과 동일하게 변화해야 하기때문에
+                        //본래의 cnt의 값은 imsi라는 변수에 저장해서 cnt의 값을 비워 놓은 후
+                        // cnt = i로 설정하여 cnt와 i값이 같아지게 함
+                            //근데 다음 슬라이드에선 임시는 무조건 현재슬라이드보다 작아야하고
+                                // 이전 슬라이드에선 임시는 무조건 현재슬라이드보다 커야함
+
+                        imsi = cnt;
+                        cnt = i; //내가 클릭한 값 = 현재 이동하는 슬라이드의 값
+                            if( imsi < i ){
+                                mainNextSlideFn();
+                            }
+                            else if( imsi > i ){
+                                mainPrevSlideFn();
+                            }
+
+                        console.log("i", i);
+                        console.log("cnt", cnt);    
+                        console.log("imsi", imsi); 
+                })  
+            })
+
+            _nextBtn.on("click",function(){
+                if( !_slide.is(":animated") )
+                nextSlideFn();
+            })
+            _prevBtn.on("click",function(){ 
+                if( !_slide.is(":animated") )
+                prevSlideFn();
+            })
 
             _window.resize(function(){
                 resizeFn();
