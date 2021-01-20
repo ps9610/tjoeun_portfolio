@@ -341,7 +341,7 @@
 #wrap #main #section02 .wrap .gap .container > ul > li .li-gap .content-wrap > ul > li .right-wrap > ul > li > a:hover {text-decoration:underline;color:#439096;}
 #wrap #main #section02 .wrap .gap .container > ul > li .li-gap .content-wrap > ul > li .right-wrap > ul > li > a:focus {text-decoration:underline;color:#439096;}
 
-#wrap #main #section03 {width:100%;height:937px;display:table;background:url(../img/bg_main_section_02.jpg) no-repeat 50% 50%;background-size:cover;padding:100px 0 0 0;}
+#wrap #main #section03 {width:100%;height:937px;display:table;background:url(../img/bg_main_section_02.jpg) no-repeat 50% 50%;background-size:cover;padding:0 0 0 100px;}
 #wrap #main #section03 .wrap {width:100%;display:table-cell;vertical-align:middle;}
 #wrap #main #section03 .wrap .gap {width:100%;}
 #wrap #main #section03 .wrap .gap .container {width:100%;max-width:1004px;margin:0 auto;}
@@ -378,4 +378,37 @@
 #wrap #main #section03 .wrap .gap .container > ul > li:last-child .li-gap .content-wrap .content > ul > li:nth-child(5) > a .content-icon {background:url(../img/spr_ico_main_guide.png) no-repeat 66.5% 59.6%;background-size:270px 328px;}
 #wrap #main #section03 .wrap .gap .container > ul > li:last-child .li-gap .content-wrap .content > ul > li:nth-child(6) > a .content-icon {background:url(../img/spr_ico_main_guide.png) no-repeat 100% 29.8%;background-size:270px 328px;}
 
-#wrap #footer {z-index:1;position:relative;width:100%;height:500px;background:#bdd;}
+#wrap #footer {z-index:1;position:relative;width:100%;height:500px;background:#fff;}
+#wrap #footer .footer1 {width:100%;}
+#wrap #footer .footer1 .wrap {width:100%;padding:30px 0 50px;border-bottom:1px solid #ddd;}
+#wrap #footer .footer1 .wrap .gap {width:100%;max-width:990px;margin:0 auto;}
+#wrap #footer .footer1 .wrap .gap .container {width:100%;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container {width:100%;position:relative;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .slide-view {z-index:1;position:relative;width:calc(244px*4);overflow:hidden}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .slide-view .slide-wrap {position:relative;width:calc(244px*11);left:0;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide {float:left;width:244px;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div {padding:3px 2px;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide > div > a {display:block;width:240px;height:96px;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide01 > div > a {background:url(../img/banner1.png) no-repeat 50% 50%;background-size:240px 96px;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide02 > div > a {background:url(../img/banner2.jpg) no-repeat 50% 50%;background-size:240px 96px;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide03 > div > a {background:url(../img/banner3.jpg) no-repeat 50% 50%;background-size:240px 96px;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide04 > div > a {background:url(../img/banner4.png) no-repeat 50% 50%;background-size:240px 96px;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide05 > div > a {background:url(../img/banner5.png) no-repeat 50% 50%;background-size:240px 96px;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide06 > div > a {background:url(../img/banner6.png) no-repeat 50% 50%;background-size:240px 96px;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide07 > div > a {background:url(../img/banner7.png) no-repeat 50% 50%;background-size:240px 96px;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide08 > div > a {background:url(../img/banner8.png) no-repeat 50% 50%;background-size:240px 96px;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide09 > div > a {background:url(../img/banner9.gif) no-repeat 50% 50%;background-size:240px 96px;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide10 > div > a {background:url(../img/banner10.jpg) no-repeat 50% 50%;background-size:240px 96px;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide11 > div > a {background:url(../img/banner11.png) no-repeat 50% 50%;background-size:240px 96px;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .button-wrap {position:absolute;bottom:-34%;right:2%;height:20px;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .button-wrap > ul {width:100%;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .button-wrap > ul > li {display:inline-block;text-align:right;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .button-wrap > ul > li > a {width:20px;display:block;height:20px;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .button-wrap > ul > li:first-child > a {background:url(../img/spr_ico_main_banner_play_pause.png) no-repeat 0 0;background-size:44px 39px;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .button-wrap > ul > li:last-child > a {background:url(../img/spr_ico_main_banner_play_pause.png) no-repeat 100% 0;background-size:44px 39px;}
+
+#wrap #footer .footer1 .wrap .gap .container .slide-container .arrow-left-wrap {z-index:2;position:absolute;top:40%;left:-3%;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .arrow-right-wrap {z-index:2;position:absolute;top:40%;right:-2%;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .arrow-left-wrap > a {display:block;width:21px;height:33px;background:url(../img/spr_main_banner_arrow.png) no-repeat 0 0;background-size:42px 33px;}
+#wrap #footer .footer1 .wrap .gap .container .slide-container .arrow-right-wrap > a {display:block;width:21px;height:33px;background:url(../img/spr_main_banner_arrow.png) no-repeat 100% 0;background-size:42px 33px;}
+
