@@ -39,6 +39,14 @@
     #wrap #main #section01 .wrap .gap .content .slide-container .search-wrap > ul > li.search-title {display:none;}
     #wrap #main #section01 .wrap .gap .content .slide-container .search-wrap > ul > li.search-flight {width:100%;}
     #wrap #main #section01 .wrap .gap .content .slide-container .search-wrap > ul > li.weather {float:none;width:100%;top:-40%;left:0;right:0;margin:0 0 0 0;}
+
+    #wrap .modal-locate .wrap {z-index:2;position:relative;width:100%;height:100%;display:block;}
+    #wrap .modal-locate .wrap .gap {width:100%;display:block;height:100%;}
+    #wrap .modal-locate .wrap .gap .container {max-width:100%;height:100%;margin:0;border:0;padding:40px 15px;}
+    #wrap .modal-locate .wrap .gap .container > h3 {font-size:3.055555556vw/* 33px */;}
+    #wrap .modal-locate .wrap .gap .container > h5 {font-size:1.851851852vw/* 20px */;}
+    #wrap .modal-locate .wrap .gap .container > div > input[type="text"] {float:none;width:100%;font-size:1.666666667vw/* 18px */;padding:0 1.388888889%/* 15px */;}
+    #wrap .modal-locate .wrap .gap .container > div > input[type="submit"] {float:none;width:100%;font-size:1.851851852vw/* 20px */;padding:0 2.314814815%/* 25px */;}
 }
 
 @media all and (max-width:1040px){

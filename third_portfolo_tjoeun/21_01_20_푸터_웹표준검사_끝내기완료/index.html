@@ -1035,7 +1035,7 @@
                             </ul>
                         </li>
                         <li class="locate">
-                            <a href="#">
+                            <a href="#" class="locate-btn">
                                 <span><i></i></span>
                                 <span>내 터미널<br>확인하기</span>
                             </a>
@@ -1053,7 +1053,7 @@
                             </a>
                         </li>
                         <li class="online">
-                            <a href="#">
+                            <a href="https://www.airport.kr/ap/ko/qck/onlResHtlBk.do">
                                 <span><i></i></span>
                                 <span>온라인<br>예약</span>
                             </a>
@@ -1064,13 +1064,33 @@
                                 <span>챗봇<br>AIRBOT</span>
                             </a>
                         </li>
-                        <li class="top"><a href="#">TOP</a></li>
+                        <li class="top"><a href="#section01" class="top-btn smooth-btn">TOP</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
     
+    <div class="modal-locate">
+        <div class="wrap">
+            <div class="gap">
+                <div class="container">
+                    <div class="close-btn-wrap">
+                        <a href="#" class="closeBtn" title="닫기"></a>
+                    </div>
+                    <h2><i></i></h2>
+                    <h3>CHECK YOUR TERMINAL</h3>
+                    <h4><i></i></h4>
+                    <div class="clearfix">
+                        <input type="text" id="airline" name="airline" placeholder="항공편명을 입력하세요.">
+                        <input type="submit" id="check" name="check" value="확인">
+                    </div>
+                    <h5>항공편명을 입력하시면 이용하실 터미널을 알려드립니다.</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="w3c">
         <p>
             <a href="http://validator.kldp.org/check?uri=referer" onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))">
@@ -1078,15 +1098,14 @@
         </p>
         <p>
             <a href="http://css-validator.kldp.org/check/referer">
-                <img style="border:0;width:80px;height:15px"
-                    src="//css-validator.kldp.org/images/validate/css-black"
-                    alt="올바른 CSS입니다!" />
+                <img style="border:0;width:80px;height:15px" src="https://css-validator.kldp.org/images/validate/css-black" alt="올바른 CSS입니다!" />
             </a>
         </p>
-            
     </div>
 
 </div>
+
+
 
 <script src="./js/index.js"></script>
 

@@ -5,6 +5,7 @@
                 that.mobileFn();
                 that.popupFn();
                 that.headerFn();
+                that.modalFn();
                 that.section01Fn();
                 that.section02Fn();
                 that.section03Fn();
@@ -288,6 +289,8 @@
             var _footer = $("#footer");
             var _popUp = $(".pop-up");
             var _section03 = $("#section03");
+            var _smoothBtn = $(".smooth-btn");
+            var url = null;
 
 
             //헤더 오른쪽 다국어 select 클릭이벤트
@@ -384,7 +387,35 @@
                     console.log(i);
                 })
             })
-            
+            //고탑버튼
+            _smoothBtn.on({
+                click : function(e){
+                    e.preventDefault();
+                    var _this = $(this);
+                    url = _this.attr("href");
+                    _htmlBody.stop().animate({ scrollTop : $(url).offset().top },500);
+                }
+            });
+
+        },
+        modalFn : function(){
+            var _modalLocate = $(".modal-locate");
+            var _closeBtn = _modalLocate.find(".closeBtn");
+            var _locateBtn = $(".go-top").find(".locate-btn");
+            var _htmlBody = $("html, body");
+
+            _locateBtn.on({
+                click : function(){
+                    _modalLocate.fadeIn(300);
+                    _htmlBody.addClass("addScroll");
+                }
+            });
+            _closeBtn.on({
+                click : function(){
+                    _modalLocate.fadeOut(300);
+                    _htmlBody.removeClass("addScroll");
+                }
+            })
         },
 
         section01Fn : function(){
@@ -402,7 +433,6 @@
             var cnt2 = 0;
             var setId2 = 0;
             var _pageBtn = _section01.find(".pageBtn");
-            var url = null;
 
             //섹션1 높이 설정
             setTimeout(resizeFn, 10);
