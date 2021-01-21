@@ -483,21 +483,21 @@
 .go-top .wrap .gap .container > ul .airbot > a > span > i {background:url(../img/spr_ico_quick.png) no-repeat 100% 94%;background-size:267px 67px;}
 .go-top .wrap .gap .container > ul .top > a {display:block;width:100%;color:#fff;font-size:11px;line-height:170%;text-align:center;margin-bottom:5px;}
 
-#wrap .modal-locate {z-index:4;position:absolute;top:0;left:0;width:100%;height:1090px;display:none;}
-#wrap .modal-locate:after {position:absolute;top:0;left:0;content:"";display:block;z-index:1;width:100%;height:100%;background:rgba(0,0,0,.9);}
-#wrap .modal-locate .wrap {z-index:2;position:relative;width:100%;height:100%;display:table;}
-#wrap .modal-locate .wrap .gap {width:100%;display:table-cell;vertical-align:middle;}
-#wrap .modal-locate .wrap .gap .container {position:relative;width:100%;max-width:642px;margin:0 auto;box-sizing:border-box;padding:36px 36px 70px;border:4px solid #fefefe;background:url(../img/bg_lp_modal.jpg) no-repeat 50% 50%;background-size:cover;}
-#wrap .modal-locate .wrap .gap .container .close-btn-wrap {position:absolute;top:6%;right:2%;width:25px;height:25px;}
-#wrap .modal-locate .wrap .gap .container .close-btn-wrap > a {display:inline-block;width:100%;height:100%;background:url(../img/ico_lp_modal_close.png) no-repeat 50% 50%;background-size:25px 25px;}
-#wrap .modal-locate .wrap .gap .container > h2 {width:49px;margin:0 auto 26px auto;height:60px;}
-#wrap .modal-locate .wrap .gap .container > h2 > i {display:inline-block;width:100%;height:100%;background:url(../img/ico_find_my_termimal.png) no-repeat 50% 50%;background-size:49px 60px;}
-#wrap .modal-locate .wrap .gap .container > h3 {color:#ffae43;font-size:33px;font-weight:700;text-align:center;margin-bottom:30px;letter-spacing:1px;}
-#wrap .modal-locate .wrap .gap .container > h4 {width:100%;max-width:44px;height:2px;margin:0 auto 30px;line-height:2px;}
-#wrap .modal-locate .wrap .gap .container > h4 > i {display:inline-block;width:44px;height:100%;background:rgba(225,225,225,.4);}
-#wrap .modal-locate .wrap .gap .container > div {width:100%;}
-#wrap .modal-locate .wrap .gap .container > div > input[type="text"] {display:block;float:left;width:422px;height:56px;line-height:56px;border:0;padding:0 15px;font-size:18px;}
-#wrap .modal-locate .wrap .gap .container > div > input[type="submit"] {display:block;float:right;width:140px;height:56px;line-height:56px;border:0;background:#323648;font-size:20px;color:#fff;padding:0 25px;}
-#wrap .modal-locate .wrap .gap .container > h5 {margin:10px 0 20px;color:#fff;font-size:20px;line-height:170%;text-align:center;}
+#wrap #modal {z-index:4;position:absolute;top:0;left:0;width:100%;height:1090px;display:none;}
+#wrap #modal:after {position:absolute;top:0;left:0;content:"";display:block;z-index:1;width:100%;height:100%;background:rgba(0,0,0,.9);}
+#wrap #modal .wrap {z-index:2;position:relative;width:100%;height:100%;display:table;}
+#wrap #modal .wrap .gap {width:100%;display:table-cell;vertical-align:middle;}
+#wrap #modal .wrap .gap .container {position:relative;width:100%;max-width:642px;margin:0 auto;box-sizing:border-box;padding:36px 36px 70px;border:4px solid #fefefe;background:url(../img/bg_lp_modal.jpg) no-repeat 50% 50%;background-size:cover;}
+#wrap #modal .wrap .gap .container .close-btn-wrap {position:absolute;top:6%;right:2%;width:25px;height:25px;}
+#wrap #modal .wrap .gap .container .close-btn-wrap > a {display:inline-block;width:100%;height:100%;background:url(../img/ico_lp_modal_close.png) no-repeat 50% 50%;background-size:25px 25px;}
+#wrap #modal .wrap .gap .container > h2 {width:49px;margin:0 auto 26px auto;height:60px;}
+#wrap #modal .wrap .gap .container > h2 > i {display:inline-block;width:100%;height:100%;background:url(../img/ico_find_my_termimal.png) no-repeat 50% 50%;background-size:49px 60px;}
+#wrap #modal .wrap .gap .container > h3 {color:#ffae43;font-size:33px;font-weight:700;text-align:center;margin-bottom:30px;letter-spacing:1px;}
+#wrap #modal .wrap .gap .container > h4 {width:100%;max-width:44px;height:2px;margin:0 auto 30px;line-height:2px;}
+#wrap #modal .wrap .gap .container > h4 > i {display:inline-block;width:44px;height:100%;background:rgba(225,225,225,.4);}
+#wrap #modal .wrap .gap .container > div {width:100%;}
+#wrap #modal .wrap .gap .container > div > input[type="text"] {display:block;float:left;width:422px;height:56px;line-height:56px;border:0;padding:0 15px;font-size:18px;}
+#wrap #modal .wrap .gap .container > div > input[type="submit"] {display:block;float:right;width:140px;height:56px;line-height:56px;border:0;background:#323648;font-size:20px;color:#fff;padding:0 25px;}
+#wrap #modal .wrap .gap .container > h5 {margin:10px 0 20px;color:#fff;font-size:20px;line-height:170%;text-align:center;}
 
 .w3c {z-index:4;position:fixed;bottom:0;left:0;}

@@ -400,8 +400,14 @@
         },
         modalFn : function(){
             var _modalLocate = $(".modal-locate");
-            var _closeBtn = _modalLocate.find(".closeBtn");
+            var _modalWhole = $(".modal-whole");
+            var _modalTerminal = $(".modal-terminal");
+            var _locateCloseBtn = _modalLocate.find(".closeBtn");
+            var _wholeCloseBtn = _modalWhole.find(".closeBtn");
+            var _terminalCloseBtn = _modalTerminal.find(".closeBtn");
             var _locateBtn = $(".go-top").find(".locate-btn");
+            var _wholeBtn = $(".go-top").find(".whole-btn");
+            var _terminalBtn = $(".go-top").find(".terminal-btn");
             var _htmlBody = $("html, body");
 
             _locateBtn.on({
@@ -410,12 +416,37 @@
                     _htmlBody.addClass("addScroll");
                 }
             });
-            _closeBtn.on({
+            _locateCloseBtn.on({
                 click : function(){
                     _modalLocate.fadeOut(300);
                     _htmlBody.removeClass("addScroll");
                 }
-            })
+            });
+            
+            _wholeBtn.on({
+                click : function(){
+                    _modalWhole.fadeIn(300);
+                    _htmlBody.addClass("addScroll");
+                }
+            });
+            _wholeCloseBtn.on({
+                click : function(){
+                    _modalWhole.fadeOut(300);
+                    _htmlBody.removeClass("addScroll");
+                }
+            });
+            _terminalBtn.on({
+                click : function(){
+                    _modalTerminal.fadeIn(300);
+                    _htmlBody.addClass("addScroll");
+                }
+            });
+            _terminalCloseBtn.on({
+                click : function(){
+                    _modalTerminal.fadeOut(300);
+                    _htmlBody.removeClass("addScroll");
+                }
+            });
         },
 
         section01Fn : function(){
